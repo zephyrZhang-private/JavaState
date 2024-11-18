@@ -11,7 +11,7 @@ public class Demo1 {
         Map<String,Student> map = new HashMap<>();
         map.put("1001",new Student("王五",36,"软工"));
         map.put("1002",new Student("赵四",28,"电子"));
-        map.put("1003",new Student("张三",21,"魔术"));
+        map.put("1003",new Student("张三",21,"音乐"));
         map.put("1004",new Student("刘二",19,"美工"));
         map.put("1005",new Student("李一",22,"舞蹈"));
 
