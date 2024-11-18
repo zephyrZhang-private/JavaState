@@ -1,6 +1,8 @@
 package com.personal.study;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Demo3 {
     public static void main(String[] args) {
@@ -10,6 +12,18 @@ public class Demo3 {
         strings[2] = "what is happened";
         strings[3] = "so";
         strings[4] = "you are so stupid";
-        System.out.println(Arrays.toString(strings));
+
+        Map<String,Integer> map = new HashMap<>();
+        for (String member : strings) {
+            for(String key : member.split(" ")){
+                if (map.get(key) == null ){
+                    map.put(key,1);
+                }else {
+                    map.put(key,map.get(key) + 1);
+                }
+            }
+        }
+
+        System.out.println(map);
     }
 }
