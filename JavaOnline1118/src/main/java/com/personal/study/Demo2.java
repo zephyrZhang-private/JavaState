@@ -9,7 +9,9 @@ public class Demo2 {
 
         Map<String , Student> map = new HashMap<>();
         map.put("Class1",new Student("1001","Jack"));
+        map.put("Class1",new Student("1002","July"));
         map.put("Class2",new Student("2001","Rose"));
+        map.put("Class2",new Student("2002","Mark"));
 
         for(String key:map.keySet()){
             System.out.println(key+map.get(key));
