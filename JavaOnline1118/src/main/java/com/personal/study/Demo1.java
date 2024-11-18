@@ -15,7 +15,10 @@ public class Demo1 {
         map.put("1004",new Student("刘二",19,"美工"));
         map.put("1005",new Student("李一",22,"舞蹈"));
 
-        map.forEach((t1,t2)->System.out.println(t1+t2.getName()+t2.getAge()+t2.getMajor()));
+        for(String key:map.keySet()){
+            System.out.println(key+":{"+map.get(key)+"}");
+        }
+        map.forEach((t1,t2)->System.out.println("{"+t1+":["+t2.getName()+","+t2.getAge()+","+t2.getMajor()+"]}"));
     }
 
     static class Student{
@@ -38,11 +41,9 @@ public class Demo1 {
 
         @Override
         public String toString() {
-            return "Student{" +
-                    "name='" + name + '\'' +
+            return  "name='" + name + '\'' +
                     ", age=" + age +
-                    ", major='" + major + '\'' +
-                    '}';
+                    ", major='" + major + '\'';
         }
 
         public String getName() {
