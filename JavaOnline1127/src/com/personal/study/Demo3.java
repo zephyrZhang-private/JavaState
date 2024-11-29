@@ -7,8 +7,11 @@ import java.io.IOException;
 
 /*
 实例：使用字符流将a.txt拷贝到c.txt
-先从a.txt读入内存
-在从内存写出到c.txt
+
+分析：
+FileWriter、FileReader
+1.先从a.txt读入内存
+2.在从内存写出到c.txt
  */
 public class Demo3 {
     public static void main(String[] args) {
