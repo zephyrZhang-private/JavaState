@@ -6,16 +6,23 @@ import java.io.IOException;
 
 /*
 基本流的使用
-分类：字节流、字符流
+
+分类：
+1.字节输入流  FileInputStream
+2.字节输出流  FileOutputStream
+3.字符读入流  FileReader
+4.字符写出流  FileWriter
+
 区别：
 1.读字节、读字符
 2.字符流有编码操作
 
--- 字符写出流
-将Hello World 打印到txt文件中
-以内存为参照，从内存输出到磁盘：输出流
-hello world适用于字符流
-FileWriter字符写出流
+区分：以内存为参照，从内存输出到磁盘：输出流
+
+实例：将Hello World 打印到txt文件中
+
+hello world：适用于字符流
+
  */
 public class Demo1 {
     public static void main(String[] args) throws IOException {
