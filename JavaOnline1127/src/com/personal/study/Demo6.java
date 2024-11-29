@@ -1,6 +1,6 @@
 package com.personal.study;
 
-import java.io.BufferedReader;
+import java.io.*;
 
 /*
 缓冲流：本身也是流，但是它没有读写能力，只能提高读写的效率 --催化剂
@@ -10,10 +10,26 @@ import java.io.BufferedReader;
 3.字符缓冲读入流  BufferedReader
 4.字符缓冲写出流  BufferedWriter
 
-实例：
+实例：使用缓冲流实现文件内容拷贝
+
+a.txt -> f.txt
  */
 public class Demo6 {
-    public static void main(String[] args) {
-        BufferedReader
+    public static void main(String[] args) throws IOException {
+//      1.缓冲流不能读写，只能提高效率，需要借助普通流实现读入、写出操作
+
+        BufferedReader bufferedReader = new BufferedReader(new FileReader("a.txt"));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("f.txt"));
+
+//      2.完成读写 -- 方法与普通流一样
+//        一次读取一个字符
+        int num = 0;
+        while ((num=bufferedReader.read()) != -1){
+            bufferedWriter.write(num);
+        }
+
+//      3.关闭流，此处未实现自动关闭流功能
+        bufferedReader.close();
+        bufferedWriter.close();
     }
 }
