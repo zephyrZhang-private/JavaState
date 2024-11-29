@@ -1,7 +1,6 @@
 package com.personal.study;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -21,19 +20,17 @@ public class Demo5 {
     public static void main(String[] args) {
 //        创建输入输出流
         try(FileInputStream fileInputStream = new FileInputStream("b.txt");
-            FileOutputStream fileOutputStream = new FileOutputStream("d.txt");
-            FileOutputStream fileOutputStream1 = new FileOutputStream("e.txt")) {
-//            一次读一个字节到d.txt
-//            int num=0;
+            FileOutputStream fileOutputStream = new FileOutputStream("d.txt");) {
+//          一次读一个字节到d.txt
+            int num=0;
 //            while ((num=fileInputStream.read())!=-1){
 //                fileOutputStream.write(num);
 //            }
 
-//            一次读多个字节到e.txt
-            int num1 = 0 ;
+//          一次读多个字节到d.txt
             byte[] bytes = new byte[2];
-            while ((num1=fileInputStream.read(bytes))!=-1){
-                fileOutputStream1.write(bytes,0,num1);
+            while ((num=fileInputStream.read(bytes))!=-1){
+                fileOutputStream.write(bytes,0,num);
             }
         } catch (IOException e) {
             throw new RuntimeException(e);

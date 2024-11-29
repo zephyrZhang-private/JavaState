@@ -4,6 +4,9 @@ import java.io.*;
 
 /*
 缓冲流：本身也是流，但是它没有读写能力，只能提高读写的效率 --催化剂
+
+代码分析：缓冲流内部接收了读入写出流类型，通过调用普通流完成读写与关闭
+
 分类：
 1.字节缓冲输入流  BufferedInputStream
 2.字节缓冲输出流  BufferedOutputStream
