@@ -1,6 +1,5 @@
 package com.personal.study;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -8,8 +7,8 @@ import java.io.IOException;
 基本流的使用 -- 字符读入流
 
 练习：将a.txt的数据显示在控制台
-读入-写出
-a.txt -> 内存 -> console
+字符流：读入-写出
+分析：a.txt -> 内存 -> console
  */
 public class Demo2 {
     public static void main(String[] args) throws IOException {
@@ -36,8 +35,8 @@ public class Demo2 {
 //        System.out.println(new String(chars)+num);
 //        num = fileReader.read(chars);
 //        System.out.println(new String(chars)+num);
-        while ((num = fileReader.read(chars)) != -1){
-            System.out.println(new String(chars,0,num)+"字符个数："+num);
+        while ((num = fileReader.read(chars)) != -1) {
+            System.out.println(new String(chars, 0, num) + "字符个数：" + num);
         }
         fileReader.close();
     }
