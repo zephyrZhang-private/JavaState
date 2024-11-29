@@ -5,7 +5,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 /*
-基本流的使用 -- 字符写出流
+基本流的使用
+分类：字节流、字符流
+区别：
+1.读字节、读字符
+2.字符流有编码操作
+
+-- 字符写出流
 将Hello World 打印到txt文件中
 以内存为参照，从内存输出到磁盘：输出流
 hello world适用于字符流
