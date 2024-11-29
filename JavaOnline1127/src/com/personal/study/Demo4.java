@@ -7,12 +7,14 @@ import java.io.IOException;
 
 /*
 实例：使用字符流将a.txt拷贝到c.txt
-先从a.txt读入内存
-在从内存写出到c.txt
 
-代码的简化
+分析：
+1.先从a.txt读入内存
+2.在从内存写出到c.txt
+同Demo3
 
-自动关闭流
+侧重：代码的简化
+实现：自动关闭流
  */
 public class Demo4 {
     public static void main(String[] args) {
