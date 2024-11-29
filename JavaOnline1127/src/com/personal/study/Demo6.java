@@ -15,14 +15,14 @@ import java.io.*;
 
 实例：使用缓冲流实现文件内容拷贝
 
-a.txt -> f.txt
+a.txt -> e.txt
  */
 public class Demo6 {
     public static void main(String[] args) throws IOException {
 //      1.缓冲流不能读写，只能提高效率，需要借助普通流实现读入、写出操作
 
         BufferedReader bufferedReader = new BufferedReader(new FileReader("a.txt"));
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("f.txt"));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("e.txt"));
 
 //      2.完成读写 -- 方法与普通流一样
 //        一次读取一个字符
