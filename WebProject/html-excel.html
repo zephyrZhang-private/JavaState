@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标题学习</title>
+    <style>
+        thead{background-color: brown;}
+        /* tbody{background-color:aliceblue} */
+        tfoot{background-color: aqua;}
+    </style>
+</head>
+<body>
+    <h4>垂直标题</h4>
+    <table border="1">
+            <tr>
+                <th>titlt1</th>
+                <td>mess1</td>
+            </tr>
+            <tr>
+                <th>title2</th>
+                <td>mess2</td>
+            </tr>
+    </table>
+    <h4>水平标题</h4>
+    <table border="1">
+        <tr>
+            <th>title1</th>
+            <th>title2</th>
+        </tr>
+        <tr>
+            <td>mess1</td>
+            <td>mess2</td>
+        </tr>
+    </table>
+    <h4>有标题的表格</h4>
+    <table border="1">
+        <caption>小雪</caption>
+        <tr>
+            <th>阳历</th>
+            <th>阴历</th>
+            <th>属性</th>
+        </tr>
+        <tr>
+            <td>23年11月22日</td>
+            <td>十月初十</td>
+            <td>节气</td>
+        </tr>
+    </table>
+    <a href="https://www.info2soft.com/" target="_blank">点击此处跳转到英方官网</a>
+    <h4>跨行的表格</h4>
+    <table border="1">
+        <tr>
+            <th>famariy</th>
+            <td>Mr.Jam</td>
+        </tr>
+        <tr>
+            <th rowspan="5">children</th>
+            <td>Lily.Jam</td>
+        </tr>
+        <tr>
+            
+            <td>Mary.Jam</td>
+        </tr>
+        <tr>
+            
+            <td>Wife.Jam</td>
+        </tr>
+        <tr>
+            
+            <td>Think.Jam</td>
+        </tr>
+        <tr>
+            <td>Mark.Jam</td>
+        </tr>
+    </table>
+    <a href="https://www.baidu.com" target="_blank">点击此处跳转到百度</a>
+    <h4>跨列的表格</h4>
+    <table border="1" background="E:\mydata\webtest\1.png">
+        <tr>
+            <th>sid</th>
+            <th colspan="5">mess</th>
+        </tr>
+        <tr>
+            <td>001</td>
+            <td>Lily</td>
+            <td>men</td>
+            <td>22</td>
+            <td>C</td>
+            <td>95,68,103</td>
+        </tr>
+    </table>
+    <a href="https://www.csdn.com" target="_blank">点击此处跳转到csdn博客</a>
+    <h4>单元格边距</h4>
+    <div>没有边距</div>
+    <table border="1">
+        <tr>
+            <th>no.1</th>
+            <td>theshy</td>
+        </tr>
+        <tr>
+            <th>top.1</th>
+            <td>Ning</td>
+        </tr>
+    </table>
+    <div>边距为0</div>
+    <table border="1" cellpadding="0">
+        <tr>
+            <th>no.1</th>
+            <td>theshy</td>
+        </tr>
+        <tr>
+            <th>top.1</th>
+            <td>Ning</td>
+        </tr>
+    </table>
+    <div>边距为90</div>
+    <table border="1" cellpadding="90" background="E:\mydata\webtest\2.png">
+        <tr>
+            <th>no.1</th>
+            <td>theshy</td>
+        </tr>
+        <tr>
+            <th>top.1</th>
+            <td>Ning</td>
+        </tr>
+    </table>
+    <h4>表格间距</h4>
+    <div>没有间距</div>
+    <table border="1" >
+        <tr>
+            <th>no.1</th>
+            <th>top1</th>
+            <th>kda.1</th>
+        </tr>
+        <tr>
+            <td>ts</td>
+            <td>ning</td>
+            <td>li</td>
+        </tr>
+    </table>
+    <div>间距0</div>
+    <table border="1" cellspacing="0" >
+        <tr>
+            <th>no.1</th>
+            <th>top1</th>
+            <th>kda.1</th>
+        </tr>
+        <tr>
+            <td>ts</td>
+            <td>ning</td>
+            <td>li</td>
+        </tr>
+    </table>
+    <div>间距30</div>
+    <table border="1" cellspacing="30" width="500" height="360" background="E:\mydata\webtest\3.png">
+        <thead>
+            <tr>
+                <th>no.1</th>
+                <th>top1</th>
+                <th>kda.1</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ts</td>
+                <td>ning</td>
+                <td>li</td>
+            </tr>
+        </tbody>
+    </table>
+    <h4>表格中加表格</h4>
+    <table border="1" cellpadding="5" cellspacing="0" background="E:\mydata\webtest\5.png">
+        <tr>
+            <td>    
+                <div>静夜思 【唐】·李白</div>
+                <div>床前明月光，</div>
+                <div>疑似地上霜。</div>
+                <div>举头望明月,</div>
+                <div>低头思故乡。</div>
+            </td>
+            <td>
+                <table border="1" cellspacing="0" cellpadding="10">
+                    <tr>
+                        <th>name</th>
+                        <td>zhangwei</td>
+                    </tr>
+                    <tr>
+                        <th>do</th>
+                        <td>insert</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table border="1">
+                    <tr>
+                        <th>who am i</th>
+                        <td>zhangwei</td>
+                    </tr>
+                    <tr>
+                        <th>what are your sex?</th>
+                        <td>man</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table border="1" cellpadding="10">
+                    <tr>
+                        <td>
+                            <table border="1">
+                                <tr>
+                                    <th rowspan="5">机器语言</th>
+                                    <td>java</td>
+                                </tr>
+                                <tr><td>c++</td></tr>
+                                <tr><td>go</td></tr>
+                                <tr><td>python</td></tr>
+                                <tr><td>R</td></tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table border="1">
+                                <th rowspan="5">IDE</th>
+                                <td>IDEA</td>
+                                <tr><td>eclipse</td></tr>
+                                <tr><td>myeclipse</td></tr>
+                                <tr><td>vscode</td></tr>
+                                <tr><td>vs</td></tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="5" cellspacing="0" cellpadding="0">IG</th>
+                        </tr>
+                            <td>ts</td>
+                            <td>ning</td>
+                            <td>rookie</td>
+                            <td>jacklove</td>
+                            <td>leteme</td>
+                        </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
