@@ -27,8 +27,11 @@ public class Demo6 {
 
 //      可以使用properties存储Java项目中的属性信息
         Properties properties1 = new Properties();
+
 //      读取文件信息 -- load方法是从文件加载数据到properties对象
         properties1.load(new FileReader("src/config.properties"));
+        String v = properties1.getProperty("username");
+        System.out.println("name:"+v);
 
 //      遍历 -- propertyNames获取所有的key
 
@@ -37,7 +40,7 @@ public class Demo6 {
             System.out.println("key:"+s+" value:"+properties1.getProperty(s));
         }
 
-        properties1.setProperty("sex","women");
+        properties1.setProperty("sex","man");
 //      可以将数据写回磁盘
         properties1.store(new FileWriter("src/config.properties"),"change sex language");
     }
