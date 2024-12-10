@@ -1,4 +1,4 @@
-package com.info2soft;
+package personal.schema;
 
 import java.util.Arrays;
 

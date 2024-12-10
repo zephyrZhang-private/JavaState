@@ -1,9 +1,9 @@
-package com.personal.study;
+package personal.map.study;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Demo4 {
+class Demo4 {
     public static void main(String[] args) {
         String s = "aa@sohu.com,bb@163.com,cc@sina.com";
         String[] strings = s.split(",");

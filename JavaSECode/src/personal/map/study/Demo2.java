@@ -1,10 +1,10 @@
-package com.personal.study;
+package personal.map.study;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-public class Demo2 {
+class Demo2 {
     public static void main(String[] args) {
 
         Map<String , Student> map = new HashMap<>();

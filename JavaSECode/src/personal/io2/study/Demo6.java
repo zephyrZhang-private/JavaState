@@ -1,4 +1,4 @@
-package com.personal.study;
+package personal.io2.study;
 
 import java.io.FileReader;
 import java.io.FileWriter;

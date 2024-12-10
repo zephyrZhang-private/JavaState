@@ -3,7 +3,7 @@ package com.personal.study;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Demo3 {
+class Demo3 {
     public static void main(String[] args) {
         String[] strings = new String[5];
         strings[0] = "happy every day";

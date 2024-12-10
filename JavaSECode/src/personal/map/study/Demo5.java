@@ -1,4 +1,4 @@
-package com.personal.study;
+package personal.map.study;
 
 import com.sun.xml.internal.fastinfoset.util.CharArray;
 
@@ -8,7 +8,7 @@ import java.util.Map;
 
 //有一个字符串"josgjsjagwajsogiseafgjwsjgvoier"
 //要求:1.转化成字符串 :  a(字符的个数)b()c()..   2.区分大小写   3.只读取字母
-public class Demo5 {
+class Demo5 {
     public static void main(String[] args) {
         String s = "josgjsja@@gwajsogis!!eafgjws==jgvoie-r";
         char[] chars = s.toCharArray();

@@ -1,6 +1,6 @@
-package com.info2soft;
+package personal.schema;
 
-public class ClassTest01 {
+class ClassTest01 {
     public static void main(String[] args) {
         Person person = new Person();
         person.name = "罗伟康";

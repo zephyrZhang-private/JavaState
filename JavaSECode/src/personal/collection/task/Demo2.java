@@ -1,10 +1,10 @@
-package com.info2soft.homework2;
+package personal.collection.task;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-public class Demo1 {
+class Demo1 {
     public static void main(String[] args) {
         Map<String,Class> map1 = new HashMap<>();
         map1.put("1001",new Class("张惠妹",22,"表演","一班"));

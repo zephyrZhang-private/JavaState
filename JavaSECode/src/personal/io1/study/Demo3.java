@@ -1,4 +1,4 @@
-package com.personal.study;
+package personal.io1.study;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -13,7 +13,7 @@ FileWriter、FileReader
 1.先从a.txt读入内存
 2.在从内存写出到c.txt
  */
-public class Demo3 {
+class Demo3 {
     public static void main(String[] args) {
         FileReader fileReader = null;
         FileWriter fileWriter = null;
