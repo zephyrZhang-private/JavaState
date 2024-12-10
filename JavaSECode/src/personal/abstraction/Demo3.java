@@ -1,4 +1,4 @@
-package com.info2soft;
+package personal.abstraction;
 
 import java.util.HashSet;
 

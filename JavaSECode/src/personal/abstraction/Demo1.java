@@ -1,4 +1,4 @@
-package com.info2soft;
+package personal.abstraction;
 
 public class Demo1 {
     public static void main(String[] args) {
