@@ -28,27 +28,34 @@ public class Main {
         JSONObject jsonObject = new JSONObject();
 
 
-        int num=101;
+//      增量循环起始值
+        int num=1;
+//      topic--rtmin、realtime 映射目标端复合主键1
         String code="688692";
-        int market=101;
-        String setCode="101";
-        int limit = 200;
+//      topic--rtmin 映射目标端复合主键2
+        int market=num;
+//      topic--realtime 映射目标端复合主键2
+        String setCode="1";
+//      增量循环结束值
+        int limit = 120;
+        ProducerRecord<String, String> record;
+        ProducerRecord<String, String> record2;
 
-        while (num <= limit) {
+        while (num<=limit) {
             synchronized (producer) {
                 jsonObject.put(k1,setData(k1,code,market,setCode));
                 jsonObject.put(k2, setData(k2,code,market,setCode));
-//      获取key值
+//                获取key值
 //                String k1 = jsonObject.keySet().toArray()[0].toString();
-//      获取value --json{}两边不会打印双引，toString的话 会有双引  kafka识别不了
-                String v1 = jsonObject.getString(k1);
-//        System.out.println(v1);
+//                System.out.println(v1);
 //                String k2 = jsonObject.keySet().toArray()[1].toString();
+                //获取value --json{}两边不会打印双引，toString的话 会有双引，kafka识别不了
+                String v1 = jsonObject.getString(k1);
                 String v2 = jsonObject.getString(k2);
 
                 // 创建 Kafka 消息记录
-                ProducerRecord<String, String> record = new ProducerRecord<>("rtmin", k1, v1);
-                ProducerRecord<String, String> record2 = new ProducerRecord<>("realtime", k2, v2);
+                record = new ProducerRecord<>("rtmin", k1, v1);
+                record2 = new ProducerRecord<>("realtime", k2, v2);
 
                 // 发送 Kafka 消息记录
                 producer.send(record);
@@ -58,8 +65,9 @@ public class Main {
                 code = String.valueOf(Integer.parseInt(code)+1);
                 market++;
                 setCode =String.valueOf(Integer.parseInt(setCode)+1);
+
                 try {
-                    producer.wait(200);
+                    producer.wait(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -73,16 +81,16 @@ public class Main {
     public static String setData(String key ,String code ,int market,String setCode){
 
         String s1="{\"mf\"" +
-                ":{\"iAmtOfBuy\":[573029,443659,0,0,100],\n" +
+                ":{\"iAmtOfBuy\":[573029,443659,0,101,100],\n" +
                 "\"iVolOfBuy\":[54500,42200,0,0],\n" +
                 "\"iAmtOfSell\":[390152,0,525500,0],\n" +
                 "\"iVolOfSell\":[37100,0,50000,0],\n" +
-                "\"iNumOfSell\":[56,0,1,0],\n" +
+                "\"iNumOfSell\":[5,0,1,0],\n" +
                 "\"iBuyNum\":[56,8,0,0]},\n" +
                 "\"time\":2411111341,\n" +
                 "\"code\":\""+code+"\",\n" +
                 "\"market\":"+market+"}";
-        String s2="{\"afterDealAmount\" : 0.0,\n" +
+        String s2="{\"afterDealAmount\" : 10.0,\n" +
                 "\"afterDealVol\" : 0.0,\n" +
                 "\"amp\" : 0.0807,\n" +
                 "\"avgPrice\" : 447.954,\n" +
