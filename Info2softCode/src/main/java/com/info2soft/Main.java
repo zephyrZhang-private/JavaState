@@ -25,18 +25,22 @@ public class Main {
 
         ExecutorService executorService = Executors.newCachedThreadPool();
 
-//        Future<String> rtmin = executorService.submit(new Rtmin());
-//        Future<String> realtime = executorService.submit(new Realtime());
+//        int num = 0;
+//        while (num < 3) {
+//            Future<String> rtmin = executorService.submit(new Rtmin());
+//            Future<String> realtime = executorService.submit(new Realtime());
+//            System.out.println(rtmin.get());
+//            System.out.println(realtime.get());
+//            num++;
+//        }
+        executorService.submit(new Rtmin());
+        executorService.submit(new Realtime());
 
         executorService.submit(new Rtmin());
-        executorService.submit(new Realtime());
-        executorService.submit(new Rtmin());
-        executorService.submit(new Realtime());
-        executorService.submit(new Rtmin());
-        executorService.submit(new Realtime());
+        executorService.submit(new Realtime1());
 
-//        System.out.println(rtmin.get());
-//        System.out.println(realtime.get());
+        executorService.submit(new Rtmin());
+        executorService.submit(new Realtime2());
 
         executorService.shutdown();
 
