@@ -32,7 +32,7 @@ class SumNumber2 implements Callable<Integer>{
     @Override
     public Integer call() throws Exception {
         int sum = 0;
-        for (int i = 1; i < 500; i++) {
+        for (int i = 501; i < 1000; i++) {
             sum+=i;
         }
         return sum;
