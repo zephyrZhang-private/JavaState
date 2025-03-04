@@ -19,7 +19,8 @@ public class Demo2 {
 /*    2.注册驱动，获取驱动对象
        - mysql8.0--com.mysql.jdbc.Driver
        - mysql5.7--com.mysql.cj.jdbc.Driver
-      简化,通过类静态方法引用,减少对象重复new的过程
+      简化,使用反射
+       - 通过类静态方法引用,减少对象重复new的过程
        - 减少资源的浪费
        - 提升工作效率
 */
