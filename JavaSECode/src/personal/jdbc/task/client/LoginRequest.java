@@ -14,9 +14,17 @@ public class LoginRequest {
         String password = scanner.nextLine();
         User user = new User(username, password);
         ServletRequest servletRequest=new ServletRequest();
-        User u1 = servletRequest.findUser(user);
+
+//      存在SQL注入问题的方法
+//        User u1 = servletRequest.findUser(user);
+//        if (u1 != null) {
+//            System.out.println("登录成功");
+//        }else System.out.println("无效用户");
+
+//      解决SQL注入问题的方法
+        User u1 = servletRequest.findUserOptimal(user);
         if (u1 != null) {
-            System.out.println("登录成功");
-        }else System.out.println("无效用户");
+            System.out.println("login successfully");
+        }else System.out.println("username invalid");
     }
 }
