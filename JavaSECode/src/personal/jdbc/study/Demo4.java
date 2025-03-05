@@ -1,4 +1,4 @@
-package personal.jdbc;
+package personal.jdbc.study;
 
 import util.jdbcutils.JDBCUtils;
 

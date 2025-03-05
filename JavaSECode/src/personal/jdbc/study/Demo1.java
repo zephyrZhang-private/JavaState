@@ -1,8 +1,6 @@
-package personal.jdbc;
+package personal.jdbc.study;
 
 import java.sql.*;
-import java.util.Properties;
-import java.util.StringTokenizer;
 
 /*
 JDBC的基本使用
