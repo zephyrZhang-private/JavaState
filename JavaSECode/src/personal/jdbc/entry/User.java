@@ -1,4 +1,4 @@
-package util.entry;
+package personal.jdbc.entry;
 
 import java.io.Serializable;
 

@@ -1,6 +1,6 @@
 package personal.jdbc.study;
 
-import util.jdbcutils.JDBCUtils;
+import personal.jdbc.util.jdbcutils.JDBCUtils;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

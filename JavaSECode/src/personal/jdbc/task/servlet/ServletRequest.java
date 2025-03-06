@@ -1,7 +1,7 @@
 package personal.jdbc.task.servlet;
 
-import util.entry.User;
-import util.jdbcutils.JDBCUtils;
+import personal.jdbc.entry.User;
+import personal.jdbc.util.jdbcutils.JDBCUtils;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

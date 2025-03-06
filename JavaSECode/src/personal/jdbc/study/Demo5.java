@@ -1,7 +1,7 @@
 package personal.jdbc.study;
 
-import util.entry.TChina;
-import util.jdbcutils.JDBCUtils;
+import personal.jdbc.entry.TChina;
+import personal.jdbc.util.jdbcutils.JDBCUtils;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
