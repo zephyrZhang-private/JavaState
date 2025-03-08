@@ -1,7 +1,7 @@
-package personal.jdbc.task.client;
+package personal.jdbc.task1.client;
 
-import personal.jdbc.task.servlet.ServletRequest;
-import personal.jdbc.entry.User;
+import personal.jdbc.task1.servlet.ServletRequest;
+import personal.jdbc.entity.User;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package personal.jdbc.util.jdbcutils;
+package personal.jdbcutils;
 
 import java.io.FileReader;
 import java.io.IOException;

@@ -1,6 +1,6 @@
 package personal.jdbc.study;
 
-import personal.jdbc.util.jdbcutils.JDBCUtils;
+import personal.jdbcutils.JDBCUtils;
 
 import java.sql.*;
 
