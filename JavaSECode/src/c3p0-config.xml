@@ -3,7 +3,7 @@
     <default-config>
         <property name="user">root</property>
         <property name="password">root</property>
-        <property name="jdbcUrl">jdbc:mysql://47.239.15.105:3306/zhdb</property>
+        <property name="jdbcUrl">jdbc:mysql://47.239.15.195:3306/zhdb</property>
         <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
         <property name="acquireIncrement">10</property>
         <property name="maxPoolSize">50</property>
@@ -11,4 +11,5 @@
         <property name="initialPoolSize">5</property>
         <property name="maxIdleTime">6000</property>
     </default-config>
+<!--    <named-config name="c3p0"></named-config>-->
 </c3p0-config>

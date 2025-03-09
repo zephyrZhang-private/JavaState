@@ -1,7 +1,7 @@
-package personal.jdbc.taskpooldbcp.service;
+package personal.jdbc.taskpool.service;
 
 
-import personal.jdbc.taskpooldbcp.entity.EmpPool;
+import personal.jdbc.taskpool.entity.EmpPool;
 
 import java.util.List;
 

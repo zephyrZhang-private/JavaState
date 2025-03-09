@@ -1,4 +1,4 @@
-package personal.jdbc.taskpooldbcp.entity;
+package personal.jdbc.taskpool.entity;
 
 import java.io.Serializable;
 

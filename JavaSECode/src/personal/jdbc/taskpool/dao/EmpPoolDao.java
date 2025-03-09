@@ -1,6 +1,6 @@
-package personal.jdbc.taskpooldbcp.dao;
+package personal.jdbc.taskpool.dao;
 
-import personal.jdbc.taskpooldbcp.entity.EmpPool;
+import personal.jdbc.taskpool.entity.EmpPool;
 
 import java.util.List;
 

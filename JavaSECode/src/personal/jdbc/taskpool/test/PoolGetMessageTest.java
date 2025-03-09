@@ -1,8 +1,8 @@
-package personal.jdbc.taskpooldbcp.test;
+package personal.jdbc.taskpool.test;
 
 
-import personal.jdbc.taskpooldbcp.service.EmpPoolService;
-import personal.jdbc.taskpooldbcp.service.impl.EmpPoolServiceImpl;
+import personal.jdbc.taskpool.service.EmpPoolService;
+import personal.jdbc.taskpool.service.impl.EmpPoolServiceImpl;
 
 public class PoolGetMessageTest {
     public static void main(String[] args) {

@@ -1,7 +1,7 @@
-package personal.jdbc.taskpooldbcp.dao.impl;
+package personal.jdbc.taskpool.dao.impl;
 
-import personal.jdbc.taskpooldbcp.dao.EmpPoolDao;
-import personal.jdbc.taskpooldbcp.entity.EmpPool;
+import personal.jdbc.taskpool.dao.EmpPoolDao;
+import personal.jdbc.taskpool.entity.EmpPool;
 import personal.jdbcutils.DBUtildbcp;
 
 import java.sql.Connection;
