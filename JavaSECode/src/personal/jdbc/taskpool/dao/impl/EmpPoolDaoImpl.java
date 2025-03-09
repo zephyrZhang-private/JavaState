@@ -4,6 +4,7 @@ import personal.jdbc.taskpool.dao.EmpPoolDao;
 import personal.jdbc.taskpool.entity.EmpPool;
 import personal.jdbcutils.DBUtilC3p0;
 import personal.jdbcutils.DBUtildbcp;
+import personal.jdbcutils.DBUtildruid;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -26,7 +27,11 @@ public class EmpPoolDaoImpl implements EmpPoolDao {
 //            connection = DBUtildbcp.getConnection();
 
 //          c3p0连接池
-            connection = DBUtilC3p0.getConnection();
+//            connection = DBUtilC3p0.getConnection();
+
+//          druid连接池
+            connection = DBUtildruid.getConnection();
+
             String sql = "select * from emp";
             statement=connection.prepareStatement(sql);
             set = statement.executeQuery();
