@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EmpDapImpl implements EmpDao {
+public class EmpDaoImpl implements EmpDao {
     @Override
     public List<Emp> getMessage() {
         Connection connection = null;

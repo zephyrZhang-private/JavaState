@@ -1,7 +1,5 @@
 package personal.jdbc.task2.test;
 
-import personal.jdbc.task2.dao.EmpDao;
-import personal.jdbc.task2.dao.impl.EmpDapImpl;
 import personal.jdbc.task2.entity.Emp;
 import personal.jdbc.task2.service.EmpService;
 import personal.jdbc.task2.service.impl.EmpServiceImpl;
