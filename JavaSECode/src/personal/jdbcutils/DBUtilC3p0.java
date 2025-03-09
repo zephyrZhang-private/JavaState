@@ -28,10 +28,4 @@ public class DBUtilC3p0 {
             e.printStackTrace();
         }
     }
-
-    public static void main(String[] args) throws SQLException {
-        Connection connection = pool.getConnection();
-        System.out.println(connection);
-        connection.close();
-    }
 }
