@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 
-public class dbcpUtils {
+public class DBUtildbcp {
 
     private static String driver;
     private static String url;

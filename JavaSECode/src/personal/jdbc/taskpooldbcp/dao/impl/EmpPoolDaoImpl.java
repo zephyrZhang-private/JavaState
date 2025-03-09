@@ -2,7 +2,7 @@ package personal.jdbc.taskpooldbcp.dao.impl;
 
 import personal.jdbc.taskpooldbcp.dao.EmpPoolDao;
 import personal.jdbc.taskpooldbcp.entity.EmpPool;
-import personal.jdbcutils.dbcpUtils;
+import personal.jdbcutils.DBUtildbcp;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -20,7 +20,7 @@ public class EmpPoolDaoImpl implements EmpPoolDao {
         List<EmpPool> list =new ArrayList();
 
         try {
-            connection =dbcpUtils.getConnection();
+            connection = DBUtildbcp.getConnection();
             String sql = "select * from emp";
             statement=connection.prepareStatement(sql);
             set = statement.executeQuery();
@@ -38,7 +38,7 @@ public class EmpPoolDaoImpl implements EmpPoolDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        dbcpUtils.closeAll(connection,statement,set);
+        DBUtildbcp.closeAll(connection,statement,set);
         return list;
     }
 }
