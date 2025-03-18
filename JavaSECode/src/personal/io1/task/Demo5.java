@@ -1,4 +1,4 @@
-package com.personal.task1;
+package personal.io1.task;
 
 import java.io.*;
 
