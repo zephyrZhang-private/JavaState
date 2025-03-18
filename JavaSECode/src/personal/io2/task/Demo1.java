@@ -1,4 +1,4 @@
-package com.personal.task2;
+package personal.io2.task;
 
 import java.io.*;
 import java.util.Properties;
