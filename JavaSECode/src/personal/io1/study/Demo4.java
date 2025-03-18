@@ -1,4 +1,4 @@
-package com.personal.study;
+package personal.io1.study;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
