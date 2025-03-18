@@ -1,0 +1,40 @@
+{ "_id": ObjectId(),
+  "userId": "ecEpKNdpkPWs5iQ1wXMTNQ==",
+  "md5": "988b46e278f42ef2445c56b615e4c6f4",
+  "updateFlag": "1",
+  "updateTime":"2025-03-14 17:07:34",
+  "stockList": [
+    {"market": "2","stockCode": "000001","createTime": "2019-02-20 10:56:24"},
+    {"market": "1","stockCode": "399001","createTime": "2019-02-20 10:56:24"},
+    {"market": "1","stockCode": "002326","createTime": "2019-02-20 10:56:24"},
+    {"market": "1","stockCode": "002643","createTime": "2019-02-20 10:56:24"},
+    {"market": "5","stockCode": "301766","createTime": "2019-02-20 10:56:24"},
+    {"market": "1","stockCode": "000930","createTime": "2019-02-20 10:56:24"},
+    {"market": "2","stockCode": "601766","createTime": "2019-02-20 10:56:24"},
+    {"market": "1","stockCode": "000050","createTime": "2019-02-20 10:56:24"},
+    {"market": "1","stockCode": "002756","createTime": "2019-02-20 13:10:46"},
+    {"market": "2","stockCode": "999999","createTime": "2019-02-20 15:10:56"},
+    {"market": "1","stockCode": "002182","createTime": "2019-02-25 09:41:10"}
+  ],
+  "stockGroup": {
+    "879930ce-672a-42dc-9077-fec9367e92e1": [
+      {"market": "1","stockCode": "600000","createTime": "2021-03-24 17:25:08"},
+      {"market": "0","stockCode": "002271","createTime": "2021-03-24 17:25:08"}
+    ],
+	"aaaaaaaa-672a-42dc-9077-fec9367e92e1": [
+      {"market": "1","stockCode": "99999","createTime": "2021-03-24 17:25:08"},
+      {"market": "0","stockCode": "888888","createTime": "2021-03-24 17:25:08"}
+    ]},
+"nStockList": [
+    {"market": "1","stockCode": "000001","createTime": "2021-03-23 17:28:17"},
+    {"market": "0","stockCode": "399001","createTime": "2021-03-23 17:28:17"},
+    {"market": "0","stockCode": "002326","createTime": "2021-03-23 17:28:17"},
+    {"market": "0","stockCode": "002643","createTime": "2021-03-23 17:28:17"},
+    {"market": "2","stockCode": "017686","createTime": "2021-03-23 17:28:17"},
+    {"market": "0","stockCode": "000930","createTime": "2021-03-23 17:28:17"},
+    {"market": "1","stockCode": "601766","createTime": "2021-03-23 17:28:17"},
+    {"market": "0","stockCode": "000050","createTime": "2021-03-23 17:28:17"},
+    {"market": "0","stockCode": "002756","createTime": "2021-03-23 17:28:17"},
+    {"market": "0","stockCode": "002182","createTime": "2021-03-23 17:28:17"}
+  ],"_class": "com.dz.model.TOptionalStock"
+}
