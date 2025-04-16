@@ -20,16 +20,17 @@ public class Demo {
         MongoClient mongoClient = MongoDBUtil.getMongoClient();
         mongoCollection = mongoClient.getDatabase(dbname).getCollection(collectionname);
 
-        int limit = 5000;
+        int limit = 10;
+        int count = limit;
         try {
 
             while (limit > 0) {
                 Document document = Document.parse(Data.getStockCode());
                 mongoCollection.insertOne(document);
                 limit--;
-                System.out.println("successfully:NO."+limit);
+                int sum=count-limit;
+                System.out.println("insert into collection:NO."+sum);
             }
-            System.out.println("End insert number:"+limit);
         } catch (Exception e) {
             System.err.println("error:" + e.getMessage());
         }
