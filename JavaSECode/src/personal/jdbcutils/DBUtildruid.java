@@ -24,10 +24,29 @@ public class DBUtildruid {
         }
     }
 
+    /**
+     * 返回连接对象
+     * @return
+     * @throws SQLException
+     */
     public static Connection getConnection() throws SQLException {
         return pool.getConnection();
     }
 
+    /**
+     * 返回连接池
+     * @return
+     */
+    public static DataSource getPool(){
+        return pool;
+    }
+
+    /**
+     * 关闭连接资源
+     * @param connection
+     * @param statement
+     * @param set
+     */
     public static void closeAll(Connection connection, Statement statement, ResultSet set){
         try {
             if (connection!=null){
@@ -44,7 +63,4 @@ public class DBUtildruid {
         }
     }
 
-//    public static void main(String[] args) throws SQLException {
-//        System.out.println(pool.getConnection());
-//    }
 }

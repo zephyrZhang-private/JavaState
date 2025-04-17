@@ -1,4 +1,4 @@
-package personal.jdbc.test;
+package personal.jdbc.test.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,9 +8,9 @@ import lombok.NoArgsConstructor;
  * lombok默认包含了构造、get、set、toString方法
  * 简化了代码
  */
-@Data
-@AllArgsConstructor //全参构造方法
-@NoArgsConstructor //空参构造方法
+@Data  //可以自动生成get、set、toString等方法
+@AllArgsConstructor //自动生成全参构造方法
+@NoArgsConstructor //自动生成空参构造方法
 public class Emp {
     private Integer empno;
     private String ename;
