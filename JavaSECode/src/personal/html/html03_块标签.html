@@ -1,0 +1,39 @@
+<!DOCTYPE html>  <!-- 现在学习的是html5 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>块标签 基本文字标签</title>
+</head>
+<body>
+<!--
+    标签分类：
+        1. 块标签
+            独占一行，可以设置宽高
+        2. 行内标签
+            宽高根据内容占据，不能设置宽高
+        3. 行内块标签
+            宽高根据内容占据，可以设置宽高
+
+        div：块级标签，整个页面都是通过div标签实现
+        span：行内块标签，主要用于放置文字
+
+        style：是一个样式表，内嵌样式
+            样式：一个标签的属性（大小、字号、字体、对齐方式、加粗等）
+            z-index:层级，相对于三维坐标z轴
+            position:absolute 相对界面设置样式
+        font：文字标签  -- 在html5中已经过时
+            size：文字大小
+            color：文字颜色
+            face：文字字体
+-->
+<div id="div1" style="background-color: green;font-family: 宋体;font-size: 10px;width: 100px;height: 100px;top: 100px;left: 50px;z-index: 2;position:absolute;">
+    <p>这是第一层</p>
+    <font>这是第一张图片</font>
+</div>
+<div id="div2" style="background-color: red;font-family: 隶书;font-size: 15px;width: 300px;height: 300px;top: 200px;left: 100px;z-index: 1;position:absolute;">
+    <p>这是第二层</p>
+    <font>这是第二张图片</font>
+    <p>今天apple手机原价<span style="color: yellow;font-size: 50px">9999</span>元，现在仅需<span style="color: green;font-size: 80px">998</span>元，手机带回家</p>
+</div>
+</body>
+</html>
