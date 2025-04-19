@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表标签</title>
+</head>
+<body>
+
+<!--
+
+    列表标签
+        ul：无序标签
+            标签属性：type
+                circle：空心圆
+                disc：实心圆
+                square：黑色方块
+        ol：有序标签
+            标签属性：type
+                1：数字类型
+                A：大写类型
+                a：小写类型
+                I：大写古罗马类型
+                i：小写古罗马类型
+        li：配合使用的子标签
+        列表嵌套：有序和无序列表标签可以嵌套使用
+-->
+<!-- 无序标签 -->
+<ul type="circle">
+    <li>苹果</li>
+    <li>李子</li>
+    <li>香蕉</li>
+</ul>
+
+<ul type="disc">
+    <li>苹果</li>
+    <li>李子</li>
+    <li>香蕉</li>
+</ul>
+
+<ul type="square">
+    <li>苹果</li>
+    <li>李子</li>
+    <li>香蕉</li>
+</ul>
+
+<!-- 有序标签 -->
+<!-- start,表示从第几个字母开始有序列 -->
+<ol type="1" start="1">
+    <li>Java</li>
+    <li>php</li>
+    <li>html</li>
+</ol>
+
+<ol type="A" start="3">
+    <li>Java</li>
+    <li>php</li>
+    <li>html</li>
+</ol>
+
+<ol type="i" start="2">
+    <li>Java</li>
+    <li>php</li>
+    <li>html</li>
+</ol>
+
+<!-- 嵌套列表标签 -->
+<ul type="circle">
+    <li>
+        <ol type="i" start="1">
+            <li>China</li>
+            <li>Canada</li>
+        </ol>
+    </li>
+    <li>地球</li>
+</ul>
+
+</body>
+</html>
