@@ -5,6 +5,71 @@
     <title>表格标签</title>
 </head>
 <body>
+<!-- 表格标签
+    table：表格标签
+    tr：行
+    td：列
+    th：默认表示标题
+    caption:表格头
+    属性：
+        border：边框
+        cellspacing：单元格间距
+        cellpadding：单元格内间距
+        rowspan：跨行
+        colspan：跨列
+
+-->
+
+<table bgcolor="#7fffd4" border="1px" width="500px" align="center" cellspacing="0px" cellpadding="10px">
+    <caption align="center" style="font-size: 10px"><b>员工信息表</b></caption>
+    <tr align="center">
+        <th>员工编号</th>
+        <th>员工姓名</th>
+        <th>员工职位</th>
+        <th>员工工资</th>
+    </tr>
+    <tr align="center">
+        <td>1001</td>
+        <td>张三</td>
+        <td>web开发</td>
+        <td>15000</td>
+    </tr>
+    <tr align="center">
+        <td>1002</td>
+        <td>李四</td>
+        <td>测试开发</td>
+        <td>10000</td>
+    </tr>
+    <tr align="center">
+        <td>1003</td>
+        <td>王五</td>
+        <td>Java开发</td>
+        <td>25000</td>
+    </tr>
+</table>
+<br>
+<table align="center" bgcolor="aqua" width="600px" border="1px" cellspacing="0px">
+    <tr align="center">
+        <th>歌名</th>
+        <th>歌手</th>
+        <th>专辑</th>
+    </tr>
+    <tr align="center">
+        <td>稻香</td>
+        <td rowspan="3">周杰伦</td>
+        <td rowspan="2">魔羯座</td>
+    </tr>
+    <tr align="center">
+        <td>说好的幸福呢</td>
+    </tr>
+    <tr align="center">
+        <td>七里香</td>
+        <td>七里香</td>
+    </tr>
+    <tr align="center">
+        <td colspan="3">总计：3首</td>
+    </tr>
+</table>
 
 </body>
 </html>

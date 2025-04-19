@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签</title>
+</head>
+<body>
+
+<!-- 表单标签 form 一般与table表格标签嵌套使用
+    属性：
+        action：表单提交给后端服务器地址
+        method：表单请求方式（get、post等）
+        enctype：表单提交数据格式
+            application/x-www-form-urlencoded：默认方式 表示以键值对的形式提交
+            multipart/form-data：一般用于文件上传的时候，以二进制流的形式提交数据
+
+        子标签：
+          input：输入属性框
+            name：未来提交给后端的key
+            type：输入类型，text、密码、单选框、复选框、按钮等.....
+                radio：单选框
+                checkbox：复选框
+                file：上传文件
+                hidden：隐藏域
+
+            placeholder：输入框提示文字
+            value：输入框中内容
+            readonly：只读
+            disabled：不可用
+            max：最大值
+            min：最小值
+            maxlength：输入框最大输入长度
+            size：输入框宽度，单位字符
+
+          select：下拉列表
+            属性
+            selected：选中
+              子标签：option
+
+          textarea：文本域
+            属性
+            rows：表示高度
+            cols：表示宽度
+ -->
+
+<form align="left" action="" method="get">
+    用户名:
+    <input type="text" name="username" placeholder="insert username" size="20px" maxlength="10"><br>
+
+    密码:
+    <input type="password" name="password" placeholder="insert password" size="20px" maxlength="99"><br>
+
+    性别：
+    <input type="radio" checked name="sex" value="男" id="nan"><label for="nan">男</label>
+    <input type="radio" name="sex" value="女" id="nv"><label for="nv">女</label><br>
+
+    爱好：
+    <input type="checkbox" name="hobby" checked>唱
+    <input type="checkbox" name="hobby" checked>跳
+    <input type="checkbox" name="hobby">rap
+    <input type="checkbox" name="hobby">篮球
+    <br>
+
+    文件上传：
+    <input type="file" name="file"><br>
+
+    隐藏域：
+    <input type="hidden"><br>
+
+    城市：
+    <select name="city">
+        <option value="Shanghai">上海</option>
+        <option value="Beijing">北京</option>
+        <option value="Guangzhou">广州</option>
+        <option value="Xian">西安</option>
+    </select>
+    <br>
+
+    评论：
+    <textarea rows="20" cols="100" placeholder="请留下您宝贵的意见"></textarea>
+    <br>
+    生日：
+    <input type="date" name="birthday"><br>
+
+    生辰：
+    <input type="time" name="birthtime"><br>
+
+    日期时间：
+    <input type="datetime-local" name="datetime"><br>
+
+    年龄：
+    <input type="number" name="age"><br>
+
+    邮箱：
+    <input type="email" name="email"><br>
+
+    <button name="button-common">普通按钮（也可用于提交表单）</button><br>
+
+    带图片的提交按钮
+    <input type="image" name="button-image" src="https://cdnqn.661209.xyz/desktop202503131551.jpg" width="50px" height="20px"><br>
+
+    <input type="submit" value="确定" disabled><br> <!-- 当我们点击submit按钮时，会将表单提交到form标签中action属性下的服务器地址中 -->
+    <input type="reset" value="重置"><br>
+
+</form>
+
+</body>
+</html>
