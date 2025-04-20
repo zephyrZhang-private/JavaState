@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>尺寸和显示属性</title>
+    <!--尺寸和显示属性-->
+    <style>
+        /*
+            块属性:独占一行，可以设置宽高
+            行内属性:宽高根据内容而定，不能设置宽高
+            行内块标签:宽高根据内容而定，可以设置宽高
+            主要display控制属性
+                inline:
+                inline-block:
+                block:
+            span默认行内元素  div默认块元素
+        */
+        span{width: 200px;height: 50px;background-color: cadetblue; display: inline-block;}
+        div{width: 200px;height: 50px;background-color: yellow; display: inline;}
+        p{display: none;background-color: aqua;}
+    </style>
+</head>
+<body>
+    <span>这是span标签</span><br>
+    <div>这是div标签</div><br>
+    <p>这是p标签</p>
+</body>
+</html>
