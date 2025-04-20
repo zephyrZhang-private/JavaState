@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+    <!-- 基本选择器 -->
+    <style>
+        /*  标签选择器  */
+        p{font-size: 30px ; background-color: red ; font-family: 隶书;}
+
+        /*  id选择器  */
+        #s1{font-size: 20px; background-color:  aquamarine ; font-family: 宋体;}
+
+        /* class选择器 */
+        .div1{font-family: 宋体; font-size: 30px; color: green;}
+        .div2{font-family: 隶书; font-size: 20px; color: red;}
+
+        /*  *选择器 margin:外边距，元素与元素之间;padding：外边距：元素与内容之间  */
+        *{margin: 0px;padding: 0px;}
+
+        /*  层次选择器  */
+        /*子代选择器 用 父代定位>子代标签 表示*/
+        #test>label{font-family: 隶书;background-color: aquamarine;}
+
+        /*后代选择器 用 父代定位 后代标签 表示*/
+        #test div{font-family: 隶书;background-color: yellow;}
+
+        /*相邻兄弟选择器 用 父代定位+相邻兄弟标签 表示*/
+        #test+font{font-family: 隶书;background-color: red;}
+
+        /*兄弟选择器 用 父代定位~兄弟标签 表示*/
+        #test~span{font-family: 宋体;background-color: blueviolet;}
+
+        /*  伪类选择器 标签类型定位（适合所有该标签都用这中样式美化） id定位 */
+        /*把鼠标放在超链接上 hover 表示浮动状态*/
+        #baidu:hover{font-size: 30px; color: blueviolet;text-decoration: underline;}
+
+        /*把鼠标点在超链接上 active 表示点住状态*/
+        #baidu:active{font-size: 80px;background-color: aqua}
+
+        /*图片浮动状态*/
+        img:hover{width: 320px;height: 230px;}
+
+    </style>
+
+</head>
+<!--
+    基本选择器：
+        1. 标签选择器（必须是存在的html标签）
+            语法：
+                标签名{属性:属性值;属性:属性值;}
+        2. id选择器
+            a. 在页面标签上加id属性(唯一)
+            语法：
+                #id{属性:属性值;}
+        3. class选择器
+            a. 在页面标签上加class属性
+            语法：
+                .类名{属性:属性值;}
+        4. * 选择器 表示页面上所有元素
+            语法：
+                *{属性:属性值;}
+
+    层次选择器：
+        1. 后代选择器  孙子标签
+            语法：
+                选择器1 选择器2{属性:属性值;}
+        2. 子代选择器  儿子标签
+            选择器1 > 选择器2{属性:属性值;}
+        3. 相邻兄弟选择器 必须相邻标签使用
+            选择器1 + 选择器2{属性:属性值;}
+        4. 兄弟选择器
+            选择器1 ~ 选择器2{属性:属性值;}
+
+    无用选择器：
+
+        组合选择器
+        属性选择器
+
+    伪类选择器：针对鼠标设置
+        语法：
+            伪类名称{属性:属性值;}
+
+-->
+<body>
+
+    <!-- 标签选择器 -->
+    <p>这是标签选择器p标签</p>
+    <p>测试选择器p是否生效</p>
+
+    <!-- id选择器 唯一 -->
+    <span id="s1">这是标签选择器span标签</span><br>
+    <!--<span id="s1">测试选择器span是否生效</span>-->
+
+    <!-- class选择器 可以多次使用 -->
+    <div>
+        <div class="div1">
+            第一个div
+        </div>
+        <div class="div2">
+            第二个div
+        </div>
+    </div>
+
+    <!-- 层次选择器 可以通过id定位父标签 兄弟标签覆盖范围比相邻兄弟广 标签一致时 兄弟标签css定义放在相邻兄弟标签后会产生覆盖-->
+    <font>测试上相邻兄弟标签</font><br>
+    <font>上相邻兄弟标签</font><br>
+    <div id="test">
+        <label>子代标签-儿子标签</label>
+        <div>后代标签-孙子标签</div>
+    </div>
+    <font>下相邻兄弟标签</font><br>
+    <font>测试下相邻兄弟标签</font><br>
+    <span>兄弟标签</span><br>
+    <span>兄弟标签</span><br>
+
+    <!-- 伪类选择器 -->
+    <a>未引用伪类标签1</a>
+    <a>未引用伪类标签2</a>
+    <a id="baidu" href="https://www.baidu.com" target="_blank">百度一下，你就知道</a><br>
+    <img src="https://cdnqn.661209.xyz/desktop202503131551.jpg" width="128px" height="92px"><br>
+
+</body>
+</html>

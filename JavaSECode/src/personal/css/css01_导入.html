@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css导入方式</title>
+
+    <!-- 内部样式导入 -->
+    <!--
+    <style>
+        p{font-size: 10px;color: aqua}
+    </style>
+    -->
+
+    <!-- 导入外部样式，很少用
+
+    link所有浏览器都支持，@import版本低的IE不支持
+    @import等待html加载完在加载
+    @import不支持js动态修改
+    -->
+    <!--
+    <style>
+        @import "css01.css";
+    </style>
+    -->
+
+    <!-- 导入外部css文件  href：外部文件路径  rel：外部文件格式 -->
+    <link href="css01.css" rel="stylesheet">
+</head>
+<!--
+
+css：选择器{属性:"值";属性:"值"}
+
+ css导入方式
+    1、内联样式
+        再页面元素中添加style标签，然后编写css属性
+        特点：这个样式仅对当前标签有效
+        缺点：如果有多个div设置多个相同的属性，每个标签都需要单独添加，造成代码冗余
+        场景：每个标签的属性都不一样
+    2、内部样式
+        a. 在head标签中添加style样式
+        b. 在style标签中编写样式 选择器{属性:"值";属性:"值"}
+        特点：可以用于当前html文件中所有满足选择器的标签
+    3、外部样式
+        a. 创建 *.css 文件，并编写属性
+        b. 外部导入css文件
+        特点：可以供当前工程所有html文件使用当前的样式
+
+    内联样式 > 内部样式 > 外部样式
+
+    注意: 属性一致时，才会有上面的优先级之分，如果属性不一致，可以重叠样式
+
+ -->
+<body>
+<!--内联样式 -->
+<div id="div1" style="background-color: green;font-family: 宋体;font-size: 10px;width: 100px;height: 100px;top: 100px;left: 50px;z-index: 2;position:absolute;">
+    <p>这是第一层</p>
+    <font>这是第一张图片</font>
+</div>
+<div>
+    <p>这是第二层</p>
+    <font>这是第二张图片</font>
+</div>
+<br><br><br><br><br><br><br><br><br><br>
+<!-- 内部标签 -->
+<p>你好,欢迎你的到来</p>
+<p>快滚,不欢迎你</p>
+</body>
+</html>
