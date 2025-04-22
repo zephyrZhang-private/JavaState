@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹性布局</title>
+    <!--弹性布局-->
+    <!--
+        display:布局设置
+            flex:弹性布局（inline-block）
+
+        flex-warp:容器设置
+            wrap:超出容器边缘换行
+            nowrap:超出容器边缘不换行
+
+        flex-direction:主轴方向
+            row:水平方向 默认
+            column:垂直方向
+
+        justify-content:对齐方式
+            space-around:两侧间隔相等，项目之间间隔比项目与边框间隔大一倍
+            space-between:两端对齐，项目之间间隔相等
+            flex-start：左对齐（默认值）
+            flex-end：右对齐
+            center：居中
+
+        align-items：交叉轴对齐方式
+            center：交叉轴中点对齐
+            flex-start：交叉轴起点对齐
+            flex-end：交叉轴终点对齐
+            baseline：项目第一行文字基线对齐
+            stretch：默认值，如果项目未设置高度或者auto，将占满整个容器
+
+    -->
+    <style>
+        .div1{width: 500px; height: 600px; display: flex; background-color: salmon; flex-wrap: wrap;}
+        .div2{width: 33%; height: 200px; background-color: aqua; display: flex; flex-direction: column; justify-content: space-around; align-items: center;}
+    </style>
+</head>
+<body>
+  <div class="div1">
+    <div class="div2">
+        <img src="https://cdnqn.661209.xyz/logo.png" width="150px" height="150px">
+        <span>这是logo描述1</span>
+    </div>
+      <div class="div2">
+          <img src="https://cdnqn.661209.xyz/logo.png" width="150px" height="150px">
+          <span>这是logo描述2</span>
+      </div>
+      <div class="div2">
+          <img src="https://cdnqn.661209.xyz/logo.png" width="150px" height="150px">
+          <span>这是logo描述3</span>
+      </div>
+      <div class="div2">
+          <img src="https://cdnqn.661209.xyz/logo.png" width="150px" height="150px">
+          <span>这是logo描述4</span>
+      </div>
+  </div>
+</body>
+</html>
