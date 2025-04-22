@@ -3,35 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>浮动属性</title>
+    <!--浮动属性 float clear-->
+    <!--float：设置浮动
+        left：向左浮动
+        right：向右浮动
+
+        clear：清除浮动
+        left：左侧不允许浮动
+        right：右侧不允许浮动
+        both：两侧不允许浮动
+        none：默认值，都允许浮动
+        inherit：继承父类clear属性
+
+        浮动元素
+
+        如果元素浮动，那会让这个元素失去原来的位置，直到边缘遇到另一个浮动元素停止后显示
+        浮动元素不会对其他元素的内容造成影响，只会影响布局
+    -->
+    <style>
+        #floatD1{width:100px; height:100px; background-color: red; float: left;}
+        #floatD2{width:100px; height:100px; background-color: aqua; float: left;}
+        #floatD3{width: 100px; height: 100px; background-color: blueviolet; clear: left;}
+
+        ul{list-style: none; overflow: hidden;}
+        ul li{line-height: 50px; width: 100px; text-align: center;float: left; background-color: cadetblue; color: white;}
+        ul li:hover{background-color: salmon;}
+
+        img{width: 100px; height: 100px; float: left;}
+    </style>
 </head>
-<!--浮动属性 float clear-->
-<!--float：设置浮动
-    left：向左浮动
-    right：向右浮动
-
-    clear：清除浮动
-    left：左侧不允许浮动
-    right：右侧不允许浮动
-    both：两侧不允许浮动
-    none：默认值，都允许浮动
-    inherit：继承父类clear属性
-
-    浮动元素
-
-    如果元素浮动，那会让这个元素失去原来的位置，直到边缘遇到另一个浮动元素停止后显示
-    浮动元素不会对其他元素的内容造成影响，只会影响布局
--->
-<style>
-    #floatD1{width:100px; height:100px; background-color: red; float: left;}
-    #floatD2{width:100px; height:100px; background-color: aqua; float: left;}
-    #floatD3{width: 100px; height: 100px; background-color: blueviolet; clear: left;}
-
-    ul{list-style: none; overflow: hidden;}
-    ul li{line-height: 50px; width: 100px; text-align: center;float: left; background-color: cadetblue; color: white;}
-    ul li:hover{background-color: salmon;}
-
-    img{width: 100px; height: 100px; float: left;}
-</style>
 <body>
     <div id="floatD1"></div>
     <div id="floatD2"></div>
