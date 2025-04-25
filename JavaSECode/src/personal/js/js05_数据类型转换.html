@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据类型转换</title>
+</head>
+<body>
+    <!--
+        String格式的数字,在做除加法以外的运算时，都会转变成number类型进行运算
+        String格式的数字，加法运算时，实际时字符串拼接
+        要做加法运算，要主动将字符串数字转成number类型 parseInt | parseFloat
+
+        Boolean类型
+            number类型        非0即真
+            string类型        非""即真
+            undefined类型     假
+            null类型          假
+            object类型        真
+    -->
+
+    <script>
+        var a = '12';
+
+        console.log("(String)a+1:",a+1);
+        console.log("a-2:",a-2);
+        console.log("a*3:",a*3);
+        console.log("a/4:",a/4);
+
+        console.log("number)a+1:",parseInt(a)+1);
+        console.log("(number)a+1:",parseFloat(a)+1);
+
+        //var类型可以重复定义，后面的覆盖前面
+        var b = 0;
+        var c = "";
+        var d = undefined;
+        var e = null;
+        var f = new Date();
+
+        if (b){
+            console.log("真");
+        }else {console.log("假");}
+
+        if (c){
+            console.log("真");
+        }else {console.log("假");}
+
+        if (d){
+            console.log("真");
+        }else {console.log("假");}
+
+        if (e){
+            console.log("真");
+        }else {console.log("假");}
+
+        if (f){
+            console.log("真");
+        }else {console.log("假");}
+    </script>
+</body>
+</html>

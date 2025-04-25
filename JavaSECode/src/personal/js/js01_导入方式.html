@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js的导入方式</title>
+    <!--JavaScript分为三部分-->
+    <!--
+        ECMAScript语法
+        浏览器对象模型:BOM Browser Object Model
+        文档对象模型:DOM Document Object Model
+    -->
+
+    <!--js的导入方式-->
+    <!--
+        方式1：直接编写script标签，然后编写js脚本
+
+        方式2：外部编写js文件，html中导入js文件
+
+        注意问题：不要在引入外部js文件的script标签中编写js脚本，不会执行
+    -->
+
+    <!--方式1-->
+    <!--
+    <script>
+        alert("hello,js1");
+    </script>
+    -->
+
+    <!--方式2-->
+    <script src="js01.js">
+        <!--不会执行-->
+        alert("hello,alterImportJs");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

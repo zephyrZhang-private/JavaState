@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运算符</title>
+</head>
+<!--JS中的运算符-->
+<!--
+    与Java中一致
+        算数运算符
+        逻辑运算符
+        关系运算符
+        赋值运算符
+        三目运算符
+-->
+<body>
+    <script>
+        var a = 12;
+
+        a++;
+        console.log("a++:",a);
+
+        a+=5;
+        console.log("a+=5:",a);
+
+        var b1 = "11";
+        var b2 = 11;
+
+        //只比较内容,除+外都会变成number类型
+        console.log("b1==b2:",b1 == b2);
+        console.log("'b1+1'=='b2+1':",(b1+1) == (b2+1));
+
+        console.log("type-b1:",typeof b1);
+        console.log("type-b2",typeof b2);
+
+        //比较内容并比较数据类型
+        console.log("b1===b2:",b1 === b2);
+    </script>
+</body>
+</html>

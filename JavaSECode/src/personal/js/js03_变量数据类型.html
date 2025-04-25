@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量数据类型</title>
+    <!--变量数据类型-->
+    <!--
+        JS中定义变量的方式与Java中一致
+            1. 声明变量
+            2. 变量初始化
+            3. 使用变量
+        JS是一门弱类型语言,即声明时不需要指定类型,使用var表示,但不代表JS没有类型,类型由变量的值决定
+
+        命名规则与Java一致,遵循大小驼峰命名法
+
+        声明变量3种方式
+            var:定义变量,作用范围大,默认整个script标签;定义之前可以使用,值是undefined
+            let:定义变量,作用范围小,从定义开始到所在的函数结束(for if);定义前不能使用
+            const:定义常量,类似Java中的final
+    -->
+</head>
+<body>
+    <script>
+        // console.log(a);
+        console.log(b);
+
+        let a = 1;
+        var b = 2;
+        const c = 3;
+
+        console.log(a);
+        console.log(b);
+        console.log(c);
+
+        for (let i = 0; i < 3; i++) {
+            console.log(i);
+        }
+
+        //Uncaught ReferenceError: i is not defined
+        console.log(i);
+    </script>
+</body>
+</html>
