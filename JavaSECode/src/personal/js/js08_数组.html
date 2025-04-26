@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组</title>
+</head>
+<!--JS中的数组-->
+<!--
+    JS中的数组特点
+        1. JS中的数组长度可改变
+        2. JS中的数组元素可以是任意数据类型
+
+    JS中的数组定义
+        语法1: var 数组名 = [元素1.元素2,元素3,......];
+        语法2: var 数组名 = new Array(元素1,元素2,元素3,......);
+        语法3: var 数组名 = new Array(长度):
+
+    JS中的数组细节
+        如果增加数组的长度那么其他元素就使用undefined
+        如果减小数组的长度那么后面的元素会被删除
+        如果将数组的长度设置为0,所有元素都会被删除
+
+    JS中数组常用方法
+        push: 向数组中添加元素
+        pop: 从数组中移除元素
+
+    JS中数组的遍历
+-->
+<body>
+    <script>
+        var arr = [1,98,255.32,new Date(),undefined,null];
+
+        console.log("arrLength:"+arr.length);
+        console.log("arr:",arr);
+
+        arr[0] = 1000;
+        console.log(arr[0]);
+
+        arr[6] = "hello";
+        arr[10] = "world";
+        console.log("arr:",arr);
+        console.log("arrLength:",arr.length);
+
+        arr.length=3;
+        console.log("arrLength:",arr.length);
+        console.log("arr:",arr);
+
+        //向数组增加元素
+        arr.push("NM");
+        console.log("arrPush:"+arr);
+
+        //从数组中将最后一个元素取出
+        arr.pop();
+        console.log("arrPop:"+arr);
+
+        //数组的遍历
+        for (let i = 0; i < arr.length; i++) {
+            console.log("ace:"+arr[i]);
+        }
+
+        for (let i = arr.length - 1; i >= 0; i--) {
+            console.log("desc:"+arr[i]);
+        }
+
+        arr.forEach(console.log);
+
+        for (var index in arr) {
+            console.log("arr.in:",arr[index]);
+        }
+
+        for (let arrElement of arr) {
+            console.log("arr.of:",arrElement);
+        }
+
+        arr.length = 0;
+        console.log("arr:"+arr);
+        console.log("arrLength:"+arr.length);
+    </script>
+</body>
+</html>
