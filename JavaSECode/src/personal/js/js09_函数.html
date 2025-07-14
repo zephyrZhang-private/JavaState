@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数</title>
+</head>
+<body>
+<!--
+  在js中，函数也是一种类型(object)
+
+  函数定义:
+    命名函数: function 函数名(参数){}
+    匿名函数: function (参数){}
+    函数调用: 函数名();
+
+  js中函数的特定
+    在js中，形参和实参的个数可以不一致
+      如果实参个数大于形参个数,多余实参无效
+      如果实参个数小于形参个数,后面形参undefined表示
+    在js中传递的参数会被封装到arguments数组中
+    在js中函数不允许重载,后面的函数会覆盖前面的函数
+
+  js方法中的返回值
+    return: 作用,结束当前函数
+    在js中想返回结果,直接函数中return 值;
+-->
+<script>
+
+    function f1(){alert("函数f1已调用")}
+    f1();
+    function f2(a){alert("函数f2已调用:"+a)}
+    f2(1);
+    var a = function (){console.log("目前是匿名函数引用")}
+    a();
+
+    function f3(a,b){console.log("f3_a:"+a),console.log("f3_b:"+b)}
+    f3(10,20,30);
+
+    function f4(a,b){console.log("f4_a:"+a),console.log("f4_b:"+b)}
+    f4(10);
+
+    function f5(a,b){console.log("f5_a:"+a),console.log("f5_b:"+b)}
+    function f5(a,b,c){console.log("f5_a:"+a),console.log("f5_b:"+b),console.log("f5_c:"+c)}
+    f5(10,20,30);
+
+    function f6(){console.log(arguments)}
+    f6(10,20,30,40);
+
+    function f7(){
+        for (let argument of arguments) {
+            console.log("arguments:"+argument);
+        }}
+    f7(10,20,30,40);
+
+    function f8(a,b){return a*b;}
+    var ji = f8(10,20)
+    console.log("乘积:"+ji);
+</script>
+
+</body>
+</html>
