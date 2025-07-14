@@ -8,14 +8,45 @@
 <!--
   js中的事件
     事件源
-
+        事件绑定的源头(页面绑定的元素 button、img... 外设 鼠标、键盘...)
     事件类型
-
+        事件的类型(单击事件、双击事件、输入框失去焦点...)
     事件监测
-
+        监听事件类型
     事件回调
-    
+        事件触发后执行的函数
 -->
-<script></script>
+<button onclick="f1()">按钮(单击)</button>
+<button ondblclick="f2()">按钮(双击)</button>
+
+<form>
+<!--    onblur:获取焦点 , oninput:输入-->
+    <input type="text" name="Username" onblur="f3()"/>
+    <input type="text" name="Password" oninput="f4()"/>
+
+    <!--this代表标签select,打印属性value-->
+    <select name="Gender" onchange="f5(this)">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+    </select>
+
+    <input type="submit" value="确定"/>
+</form>
+
+<img src="https://661209.xyz/?attachment_id=249" width="200px" height="200px" onmouseover="f6()" onmouseout="f7()">
+
+<script>
+    function f1(){alert("单击事件")}
+    function f2(){alert("双击事件")}
+
+    function f3(){console.log("username already")}
+    function f4(){console.log("password already")}
+
+    function f5(s){console.log("gender:"+s.value)}
+
+    function f6(){console.log("鼠标获得焦点")}
+    function f7(){console.log("鼠标失去焦点")}
+</script>
 </body>
 </html>
