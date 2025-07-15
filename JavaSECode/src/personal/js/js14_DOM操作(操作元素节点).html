@@ -5,6 +5,42 @@
     <title>DOM操作(操作元素节点)</title>
 </head>
 <body>
+    <ul id="city">
+        <li>北京</li>
+        <li id="Shanghai">上海</li>
+        <li>广州</li>
+        <li>深圳</li>
+        <li id="Tianjin">天津</li>
+    </ul>
+    <button onclick="f1()">插入青岛 li 标签</button>
+    <button onclick="f2()">添加西安 li 标签</button>
+    <button onclick="f3()">删除天津 li 标签</button>
+    <button onclick="f4()">删除所有 li 标签</button>
+    <button id="reset">重置</button>
+    <script src="js13.js"></script>
+    <script>
+        function f1() {
+            var ul = document.getElementById('city');
+            var li = document.createElement("li");
+            li.innerHTML = "青岛";
+            ul.insertBefore(li, document.getElementById('Shanghai'));
+        }
+        function f2() {
+            var ul = document.getElementById('city');
+            var li = document.createElement("li");
+            li.innerHTML = "西安";
+            ul.appendChild(li);
+        }
+        function f3() {
+            var ul = document.getElementById('city');
+            var li = document.getElementById('Tianjin');
+            ul.removeChild(li);
+        }
+        function f4() {
+            var ul = document.getElementById('city');
+            ul.remove();
+        }
+    </script>
 
 </body>
 </html>
