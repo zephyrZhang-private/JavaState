@@ -1,10 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>DOM操作(操作属性节点)</title>
 </head>
 <body>
 
+<input type="text" name="username" id="username"/>
+<button onclick="f1()">点击获取输入框中内容</button>
+<button onclick="f2()">点击默认输入框中内容</button>
+
+<br>
+
+<img src="https://661209.xyz/?attachment_id=249" width="200px" height="200px" id="img"/>
+<button onclick="f3()">点击切换图片</button>
+<button id="reset">重置</button>
+<script src="js13.js"></script>
+<br>
+
+<input type="checkbox" name="checkbox"/>篮球
+<input type="checkbox" name="checkbox"/>足球
+<input type="checkbox" name="checkbox"/>排球
+<button onclick="f4()" id="allset">全选</button>
+<button onclick="f5()">反选</button>
+<br>
+
+<p>这是一个 p 标签</p>
+<button onclick="f6()">点击 p 标签修改样式</button>
+
+<script>
+    function f1() {
+        var username = document.getElementById("username");
+        alert(username.value);
+    }
+    function f2() {
+        var username = document.getElementById("username");
+        username.value = "admin";
+    }
+    function f3() {
+        var src = document.getElementById("img");
+        src.src = "https://661209.xyz/youtube_cover";
+    }
+    function f4() {
+        var button = document.getElementById("allset");
+        var checkbox = document.getElementsByName("checkbox");
+        if (button.innerHTML == '全选'){
+            for (let i = 0; i < checkbox.length; i++) {
+                checkbox[i].checked = true;
+            }
+            button.innerHTML = '全不选';
+        }else {
+            for (let i = 0; i < checkbox.length; i++) {
+                checkbox[i].checked = false;
+            }
+            button.innerHTML = '全选';
+        }
+    }
+    function f5() {
+        var checkbox = document.getElementsByName("checkbox");
+        for (var i = 0; i < checkbox.length; i++) {
+            if (checkbox[i].checked) {
+                checkbox[i].checked = false;
+            }else {checkbox[i].checked = true;}
+        }
+    }
+    function f6() {
+        var p = document.getElementsByTagName("p");
+        for (let i = 0; i < p.length; i++) {
+            p[i].style.color = "red";
+            p[i].style.fontWeight = "bold";
+            p[i].style.fontSize = "50px";
+        }
+    }
+</script>
 </body>
 </html>
