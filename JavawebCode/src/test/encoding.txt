@@ -1,0 +1,8 @@
+控制台打印输出乱码:
+    1. 打开tomcat/bin目录,找到catalina.bat
+    2. 216行,set "JAVA_OPTS=%JAVA_OPTS% %JSSE_OPTS%",末尾引号前添加-Dfile.encoding=UTF8 -Dsun.jnu.encoding=UTF8
+控制台日志输出乱码:
+    1. help -- Edit Custom VM Options
+    2. 末尾追加: -Dfile.encoding=UTF8
+tomcat静态页面乱码
+    tomcat配置页面中VM Options设置为:-Dfile.encoding=UTF-8

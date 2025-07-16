@@ -11,6 +11,12 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  <input type="text"/>
+  <button onclick="f1()">登录</button>
+  <script>
+    function f1(){
+      window.location='http://localhost:8080/login';
+    }
+  </script>
   </body>
 </html>
