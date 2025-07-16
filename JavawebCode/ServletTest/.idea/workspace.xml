@@ -45,6 +45,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Tomcat Server.Tomcat 9.0.107.executor": "Run",
@@ -197,11 +198,19 @@
       <workItem from="1752589616313" duration="66000" />
       <workItem from="1752589747265" duration="3139000" />
       <workItem from="1752629986233" duration="8211000" />
-      <workItem from="1752669141618" duration="13000" />
+      <workItem from="1752669141618" duration="213000" />
+      <workItem from="1752669424603" duration="205000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../.." />
+      <path value="$PROJECT_DIR$/.." />
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
   </component>
 </project>

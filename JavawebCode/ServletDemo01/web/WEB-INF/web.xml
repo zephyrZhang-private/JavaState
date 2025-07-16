@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <servlet>
+        <servlet-name>servlet01</servlet-name>
+        <servlet-class>servletTest.Servlet01</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servlet01</servlet-name>
+        <url-pattern>/s1</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>servlet02</servlet-name>
+        <servlet-class>servletTest.Servlet02</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servlet02</servlet-name>
+        <url-pattern>/s2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>servlet03</servlet-name>
+        <servlet-class>servletTest.Servlet03</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servlet03</servlet-name>
+        <url-pattern>/s3</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>servletDemo01</servlet-name>
+        <servlet-class>requestResponse.ServletDemo01</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servletDemo01</servlet-name>
+        <url-pattern>/demo01</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ForwardA</servlet-name>
+        <servlet-class>forwardRedirect.ForwardA</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ForwardA</servlet-name>
+        <url-pattern>/fa</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ForwardB</servlet-name>
+        <servlet-class>forwardRedirect.ForwardB</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ForwardB</servlet-name>
+        <url-pattern>/fb</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RedirectA</servlet-name>
+        <servlet-class>forwardRedirect.RedirectA</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RedirectA</servlet-name>
+        <url-pattern>/ra</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RedirectB</servlet-name>
+        <servlet-class>forwardRedirect.RedirectB</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RedirectB</servlet-name>
+        <url-pattern>/rb</url-pattern>
+    </servlet-mapping>
+</web-app>
