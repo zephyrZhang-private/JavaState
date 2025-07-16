@@ -14,6 +14,14 @@ import java.io.IOException;
             service:实际功能,每次客户端访问都会执行
             destroy:销毁,只执行一次
 */
+
+/*
+    http协议:
+        建立连接(三次握手)
+          客户端向服务器请求连接
+          服务器向客户端返回连接信息
+          客户端向服务器确认连接
+*/
 public class TestServlet01 implements Servlet{
 
     @Override
