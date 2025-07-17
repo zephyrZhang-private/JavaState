@@ -21,15 +21,13 @@ public class LoginServlet extends HttpServlet {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
 
-        PrintWriter pw = resp.getWriter();
-
         User user = new User(username, password);
         LoginService loginService = new LoginServiceImpl();
         User user1 = loginService.findUser(user);
 
         resp.setContentType("text/html;charset=UTF-8");
         if (user1 != null) {
-            pw.write("success");
+            req.getRequestDispatcher("/empInfo").forward(req,resp);
         }else {
             resp.sendRedirect(req.getContextPath() + "/login.html");
         }
