@@ -4,6 +4,7 @@ import com.alibaba.druid.pool.DruidDataSourceFactory;
 
 import javax.sql.DataSource;
 import java.io.FileInputStream;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,14 +15,19 @@ public class DBUtildruid {
     private static DataSource pool = null;
 
     static {
-        try {
-            FileInputStream fileInputStream = new FileInputStream("../druid.properties");
-            Properties properties = new Properties();
-            properties.load(fileInputStream);
-            pool = DruidDataSourceFactory.createDataSource(properties);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+            try {
+                //使用类加载器提供的方法读取db.properties,返回一个字节流对象
+                InputStream is = DBUtildruid.class.getClassLoader().
+                        getResourceAsStream("druid.properties");
+                //创建Properties对象，用于加载流内部的数据
+                Properties prop = new Properties();
+                prop.load(is);//加载流内部的信息，以key-value的形式进行加载
+                //调用静态方法，会自动给自己的属性赋值
+                pool = DruidDataSourceFactory.createDataSource(prop);
+            } catch (Exception e) {
+                System.out.println("注册驱动失败");
+                e.printStackTrace();
+            }
     }
 
     /**
