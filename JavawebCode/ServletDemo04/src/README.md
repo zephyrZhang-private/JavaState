@@ -14,9 +14,9 @@
 * 一个cookie主要标识该信息的键和值
 
 ## 关键类说明
-ServletCookie01 -- 创建cookie
-ServletCookie02 -- 获取cookie
-ServletCookie03 -- 删除cookie
+* ServletCookie01 -- 创建cookie
+* ServletCookie02 -- 获取cookie
+* ServletCookie03 -- 删除cookie
 
 
 # Session
@@ -31,4 +31,12 @@ ServletCookie03 -- 删除cookie
 
 ps:session 是由服务器创建
 
+## session使用
+* session作用范围一次会话
+* 数据存入session,一次会话中任意位置获取
+* 可以传递任何数据(数组、集合、对象)
 
+## 关键类说明
+* ServletSession01 -- 创建session
+* ServletSession02 -- 获取session
+* ServletSession03 -- 删除session

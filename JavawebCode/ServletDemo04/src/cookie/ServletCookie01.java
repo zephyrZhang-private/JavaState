@@ -14,10 +14,13 @@ public class ServletCookie01 extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //创建cookie对象,值以键值对形式存在
         Cookie cookie = new Cookie("cookieName", "cookieValue");
+
         //设置保存路径
         cookie.setPath("/");
+
         //设置有效时间,单位s
         cookie.setMaxAge(3600);
+
         //发送给客户端
         resp.addCookie(cookie);
     }

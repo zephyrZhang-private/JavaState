@@ -14,6 +14,7 @@ public class ServletCookie02 extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //获取cookie,可以同时存储获取多个cookie
         Cookie[] cookies = req.getCookies();
+
         //获取指定cookie
         for (Cookie cookie : cookies) {
             if (cookie.getName().equals("cookieName")) {
