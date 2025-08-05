@@ -1,6 +1,7 @@
 package controller;
 
 import entity.EmpInfo;
+import entity.User;
 import service.EmpInfoService;
 import service.impl.EmpInfoServiceImpl;
 
@@ -18,6 +19,11 @@ public class EmpInfoServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        User user = (User) req.getSession().getAttribute("user");
+        if (user == null) {
+            resp.sendRedirect(req.getContextPath() + "/login.html");
+            return;
+        }
         System.out.println("empInfo---EmpServlet");
         resp.setContentType("text/html;charset=UTF-8");
         //展示所有雇员的信息
@@ -37,11 +43,11 @@ public class EmpInfoServlet extends HttpServlet {
         out.write("</tr>");
         for (EmpInfo emp : list) {
             out.write("<tr>");
-            out.write("<td>"+emp.getEmpNo()+"</td>");
-            out.write("<td>"+emp.getEmpName()+"</td>");
-            out.write("<td>"+emp.getDeptNo()+"</td>");
-            out.write("<td>"+emp.getDeptName()+"</td>");
-            out.write("<td>"+emp.getSalary()+"</td>");
+            out.write("<td>" + emp.getEmpNo() + "</td>");
+            out.write("<td>" + emp.getEmpName() + "</td>");
+            out.write("<td>" + emp.getDeptNo() + "</td>");
+            out.write("<td>" + emp.getDeptName() + "</td>");
+            out.write("<td>" + emp.getSalary() + "</td>");
             out.write("<td><a href='#'>删除</a><a  href='#'>修改</a></td>");
             out.write("</tr>");
         }

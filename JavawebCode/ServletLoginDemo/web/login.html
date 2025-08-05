@@ -5,16 +5,49 @@
     <title>login</title>
 </head>
 <body>
-
     <form action="login" method="post">
         <label>
-            用户名<input type="text" name="username">
+            用户名<input type="text" name="username" id="username">
         </label><br>
         <label>
-            密码<input type="password" name="password">
+            密码<input type="password" name="password" id="password">
+        </label><br>
+        <label>
+            验证码<input type="text" name="code" id="code">
+            <img src="verify" onclick="f1()" id="imgCode" alt="random number"><br>
+        </label><br>
+        <label>
+            <input type="checkbox" name="rememberMe" id="rememberMe">记住我
         </label><br>
         <input type="submit" value="登录">
     </form>
+    <script>
+        function f1(){
+            console.log("flush verify code")
+            document.getElementById("imgCode").src="verify?time="+new Date().getTime();
+        }
+        //取出cookie里面的信息,填入对应的文本框
+        function getCookie(name){
+            var arr;
+            var reg = new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+            if (arr=document.cookie.match(reg)){
+                console.log(arr[2]);
+                return unescape(arr[2]);
+            }
+            else {
+                console.log("arr is empty")
+                return null;
+            }
+        }
 
+        var userinfo = getCookie("userinfo");
+
+        if (userinfo != null){
+            console.log(userinfo)
+            document.getElementById("username").value = userinfo.split(":")[0];
+            document.getElementById("password").value = userinfo.split(":")[1];
+            document.getElementById("rememberMe").checked = true;
+        }
+    </script>
 </body>
 </html>
