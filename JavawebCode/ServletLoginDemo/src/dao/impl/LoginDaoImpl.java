@@ -16,7 +16,7 @@ public class LoginDaoImpl implements LoginDao {
         try {
 
         return queryRunner.query("select * from user where name = ? and pwd = ?",
-                new BeanHandler<User>(User.class),
+                new BeanHandler<>(User.class),
                 user.getUsername(),
                 user.getPassword());
         }catch (SQLException throwables){

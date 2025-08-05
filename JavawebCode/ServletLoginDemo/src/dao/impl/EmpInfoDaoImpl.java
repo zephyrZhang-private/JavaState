@@ -14,7 +14,7 @@ public class EmpInfoDaoImpl implements EmpInfoDao {
         //访问数据库
         QueryRunner queryRunner = new QueryRunner(DBUtildruid.getPool());
         try {
-            return  queryRunner.query("select * from empinfo",new BeanListHandler<EmpInfo>(EmpInfo.class));
+            return  queryRunner.query("select * from empinfo",new BeanListHandler<>(EmpInfo.class));
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

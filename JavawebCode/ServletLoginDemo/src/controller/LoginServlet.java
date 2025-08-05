@@ -17,7 +17,8 @@ import java.io.PrintWriter;
 public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("UTF-8");
+        //存在过滤器,不需要多余指定
+        //req.setCharacterEncoding("UTF-8");
 
         String username = req.getParameter("username");
         String password = req.getParameter("password");
@@ -31,11 +32,11 @@ public class LoginServlet extends HttpServlet {
         String verifyCode=(String) req.getSession().getAttribute("verifyText");
 
         //测试验证问题点
-        System.out.println("verifyCode:"+verifyCode);
+        //System.out.println("verifyCode:"+verifyCode);
         //对比验证码容易出问题,有需要可以忽略大小写
         if (user1 != null && code.equalsIgnoreCase(verifyCode)) {
             //保存登录状态
-            req.getSession().setAttribute("user", user1);
+            req.getSession().setAttribute("userLogin", user1);
 
             //复选框 记录cookie回传客户端
             if (remember != null) {

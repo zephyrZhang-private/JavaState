@@ -5,7 +5,9 @@ ServletDemo02案例,完善功能如下:
   * 使用其他功能前先验证登录状态
   * 注销后删除登录状态
 * 添加验证码功能
-* 添加记住密码功能
+* 添加记住密码功能 
+ 
+> 最后使用过滤器继续完善上述功能
 
 # ServletContext对象
 ## ServletContext概述
@@ -53,7 +55,7 @@ System.out.println(req.getContextPath());
 ````
 <filter>
   <filter-name>myFilter</filter-name>
-  <filter-class>src.servletContext.MyFilter</filter-class>
+  <filter-class>src.filter.MyFilter</filter-class>
 </filter>
 <filter-mapping>
   <filter-name>myFilter</filter-name>

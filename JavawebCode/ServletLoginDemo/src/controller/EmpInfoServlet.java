@@ -19,13 +19,7 @@ public class EmpInfoServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        User user = (User) req.getSession().getAttribute("user");
-        if (user == null) {
-            resp.sendRedirect(req.getContextPath() + "/login.html");
-            return;
-        }
         System.out.println("empInfo---EmpServlet");
-        resp.setContentType("text/html;charset=UTF-8");
         //展示所有雇员的信息
         EmpInfoService empService = new EmpInfoServiceImpl();
         List<EmpInfo> list = empService.getEmpInfo();
