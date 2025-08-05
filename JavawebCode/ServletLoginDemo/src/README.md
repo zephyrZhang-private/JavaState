@@ -46,3 +46,22 @@ System.out.println(req.getContextPath());
 * HttpServletRequest:一次请求
 * Httpsession:一次会话
 * ServletContext:服务器生命周期
+
+
+# Filter过滤器
+## Filter配置
+````
+<filter>
+  <filter-name>myFilter</filter-name>
+  <filter-class>src.servletContext.MyFilter</filter-class>
+</filter>
+<filter-mapping>
+  <filter-name>myFilter</filter-name>
+  <url-pattern>/*</url-pattern>
+</filter-mapping>
+````
+> 在web应用中,可以开发多个Filter,组合起来称为一个Filter链
+* 注解,按照类全名称字符串顺序决定作用顺序
+* web.xml,按照filter-mapping注册顺序,自上而下
+* web.xml配置高于注解
+* 注解和web.xml同时配置,会创建多个Filter对象,过滤多次
