@@ -67,3 +67,5 @@ System.out.println(req.getContextPath());
 * web.xml,按照filter-mapping注册顺序,自上而下
 * web.xml配置高于注解
 * 注解和web.xml同时配置,会创建多个Filter对象,过滤多次
+
+## 登录状态、自动登录过滤器
