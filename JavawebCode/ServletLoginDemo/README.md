@@ -69,3 +69,22 @@ System.out.println(req.getContextPath());
 * 注解和web.xml同时配置,会创建多个Filter对象,过滤多次
 
 ## 登录状态、自动登录过滤器
+* 保持登录状态,验证session在服务器中是否存在,使用的页面*.do命名
+* 自动登录,过滤login.html页面,获取cookie中的用户信息,校验数据库获取所有信息,写入session后跳转
+
+# JSP原理
+* 在如今前后端分离的推进下被剔除的技术
+* 本质为了减少servlet前端开发的工作量
+* 实际还是一个servlet,jsp文件被编译为*_jsp.java -> *_jsp.class
+* jsp中可以写Java代码,还可以写标签
+* 理解为主,能看懂代码
+* <%= %> : 局部变量,out.write
+* <%! %> : 成员变量,全局变量,定义在jsp对应servlet类中
+* <% %>  : 局部变量,定义在jsp对应servlet类中service方法
+
+## jsp注释方法
+* <%----%> : jsp注释,注释内容不会被编译不会发送到客户端
+* <!---->  : HTML注释,通过客户端可查看注释内容
+
+## el表达式
+* 对jsp代码的简化
