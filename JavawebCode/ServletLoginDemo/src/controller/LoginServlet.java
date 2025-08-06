@@ -45,7 +45,7 @@ public class LoginServlet extends HttpServlet {
                 CookieUtil.removeCookie("userinfo",req,resp);
             }
             //登录成功后转发到empInfo页面
-            req.getRequestDispatcher("/emp.do").forward(req,resp);
+            req.getRequestDispatcher("/empJsp.do").forward(req,resp);
         }else {
             resp.sendRedirect(req.getContextPath() + "/login.html");
         }

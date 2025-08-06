@@ -31,7 +31,7 @@ public class AutoLoginFilter implements Filter {
             //将完整的用户信息放入session,跳转到/empInfo
             if (u != null) {
                 request.getSession().setAttribute("userLogin",u);
-                response.sendRedirect(request.getContextPath()+"/emp.do");
+                response.sendRedirect(request.getContextPath()+"/empJsp .do");
             }else  {
                 System.out.println("AutoLoginElse");
                 response.sendRedirect(request.getContextPath()+"/login.html");

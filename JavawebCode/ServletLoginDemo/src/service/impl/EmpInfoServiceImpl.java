@@ -8,8 +8,13 @@ import service.EmpInfoService;
 import java.util.List;
 
 public class EmpInfoServiceImpl implements EmpInfoService {
+    private EmpInfoDao empInfoDao = new EmpInfoDaoImpl();
     public List<EmpInfo> getEmpInfo() {
-        EmpInfoDao empInfoDao = new EmpInfoDaoImpl();
         return empInfoDao.selectEmpInfo();
+    }
+
+    @Override
+    public int deleteEmpById(String empNo) {
+        return empInfoDao.deleteEmpById(empNo);
     }
 }
