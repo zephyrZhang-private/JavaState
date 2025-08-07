@@ -31,7 +31,6 @@ public class EmpInfoServlet extends HttpServlet {
         out.write("<th>员工编号</th>");
         out.write("<th>员工姓名</th>");
         out.write("<th>部门编号</th>");
-        out.write("<th>部门名称</th>");
         out.write("<th>工资</th>");
         out.write("<th>操作</th>");
         out.write("</tr>");
@@ -40,7 +39,6 @@ public class EmpInfoServlet extends HttpServlet {
             out.write("<td>" + emp.getEmpNo() + "</td>");
             out.write("<td>" + emp.getEmpName() + "</td>");
             out.write("<td>" + emp.getDeptNo() + "</td>");
-            out.write("<td>" + emp.getDeptName() + "</td>");
             out.write("<td>" + emp.getSalary() + "</td>");
             out.write("<td><a href='#'>删除</a><a  href='#'>修改</a></td>");
             out.write("</tr>");

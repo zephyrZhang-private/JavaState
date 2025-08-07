@@ -14,7 +14,22 @@ public class EmpInfoServiceImpl implements EmpInfoService {
     }
 
     @Override
-    public int deleteEmpById(String empNo) {
+    public int deleteEmpById(int empNo) {
         return empInfoDao.deleteEmpById(empNo);
+    }
+
+    @Override
+    public EmpInfo findOneById(int empNo) {
+        return empInfoDao.findOneEmpById(empNo);
+    }
+
+    @Override
+    public int updateEmp(EmpInfo empInfo) {
+        return empInfoDao.updateEmp(empInfo);
+    }
+
+    @Override
+    public int addEmp(EmpInfo empInfo) {
+        return empInfoDao.addEmp(empInfo);
     }
 }
