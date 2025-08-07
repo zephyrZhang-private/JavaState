@@ -60,14 +60,15 @@ public class EmpInfoDaoImpl implements EmpInfoDao {
     @Override
     public int addEmp(EmpInfo empInfo) {
         try {
-            return queryRunner.update("insert into empinfo values(?,?,?,?,?,?,?)",
+            return queryRunner.update("insert into empinfo values(?,?,?,?,?,?,?,?)",
                     empInfo.getEmpNo(),
                     empInfo.getEmpName(),
                     empInfo.getEmpJob(),
                     empInfo.getEmpManger(),
                     empInfo.getEmpDate(),
                     empInfo.getDeptNo(),
-                    empInfo.getSalary());
+                    empInfo.getSalary(),
+                    empInfo.getImage());
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

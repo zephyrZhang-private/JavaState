@@ -11,13 +11,14 @@
 <head>
     <title>新增表单</title>
 </head>
-<form action="/empAdd.do" method="post">
+<form action="/empAdd.do" method="post" enctype="multipart/form-data">
     员工编号 : <input type="text" name="empNo"><br>
     员工姓名 : <input type="text" name="empName"><br>
     员工职级 : <input type="text" name="empJob"><br>
     员工经理 : <input type="text" name="empManger"><br>
     入职日期 : <input type="text" name="empDate"><br>
     员工绩效 : <input type="text" name="salary"><br>
+    员工图片 : <input type="file" name="image"><br>
     部门编号 :
     <select name="deptno">
         <c:forEach items="${deptList}" var="dept">

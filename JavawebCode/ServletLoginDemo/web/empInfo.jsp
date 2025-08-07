@@ -10,6 +10,7 @@
        bgcolor=\"blanchedalmond\">
     <tr>
         <th>员工编号</th>
+        <th>员工头像</th>
         <th>员工姓名</th>
         <th>员工职级</th>
         <th>员工经理</th>
@@ -22,6 +23,7 @@
     <c:forEach items="${empInfoList}" var="emp" begin="0" end="${empInfoList.size()}" step="1">
         <tr>
             <td>${emp.empNo}</td>
+            <td><img src="/img/${emp.image == null ? '8.jpg' : emp.image}" width="100px" height="100px"></td>
             <td>${emp.empName}</td>
             <td>${emp.empJob}</td>
             <td>${emp.empManger}</td>

@@ -17,4 +17,15 @@ public class EmpInfo {
     private Date empDate;
     private Integer deptNo;
     private Double salary;
+    private String image;
+
+    public EmpInfo(Integer empNo, String empName, String empJob, String empManger, Date empDate, Integer deptNo, Double salary) {
+        this.empNo = empNo;
+        this.empName = empName;
+        this.empJob = empJob;
+        this.empManger = empManger;
+        this.empDate = empDate;
+        this.deptNo = deptNo;
+        this.salary = salary;
+    }
 }
