@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实时时间</title>
+</head>
+<body>
+<input type="button" value="开始" onclick="showTime()">
+<br>
+当前系统时间是:<span id="clock"></span>
+<br>
+<input type="button" value="结束" onclick="stopTime()">
+</body>
+<script type="text/javascript">
+  function getTime() {
+    var date = new Date();
+    year = date.getFullYear();
+    month = date.getMonth();
+    day = date.getDate();
+    hour = date.getHours();
+    minute = date.getMinutes();
+    second = date.getSeconds();
+    fullTime = year + "-" + month + "-" + day + "  " + hour + ":" + minute + ":" + second;
+    document.getElementById("clock").innerHTML = fullTime;
+  }
+
+  var i = 0 //清除
+  function showTime(){
+      i = setInterval(getTime, 1000);
+  }
+  function stopTime(){
+      window.clearInterval(i);
+  }
+</script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组织事件传播(冒泡)行为</title>
+<!--
+    以下为展示事件传播行为并阻止
+        首先,div1嵌套了div2
+        onmouseover:鼠标移入事件
+        鼠标移入div2,弹出alert-div2后弹出alert-div1
+        这种行为便是事件传播行为,也叫事件冒泡行为
+        解决方法:从div2的鼠标移入事件阻止事件冒泡
+-->
+    <style type="text/css">
+        div#box1{
+            width: 400px;
+            height: 400px;
+            background-color: red;
+        }
+        div#box2{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<!-- 快捷键 : div#box1>div#box2 Tab补齐-->
+<div id="box1" onmouseover="fn1(event)">
+    <div id="box2" onmouseover="fn2(event)"></div>
+</div>
+</body>
+<script type="text/javascript">
+    function fn1(e){
+        alert("box1")
+    }
+    function fn2(e){
+        if (event && event.stopPropagation) {
+            //非IE浏览器阻止事件的冒泡行为
+            e.stopPropagation();
+        }else {
+            window.event.cancelBubble = true;
+        }
+        alert("box2")
+    }
+</script>
+</html>

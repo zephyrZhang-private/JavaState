@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS基本数据类型</title>
+</head>
+<body>
+<script type="text/javascript">
+    var username = "roby";
+    console.log(isNaN(username));//true 如果不是一个数字返回true
+    var age = "12";
+    console.log(isNaN(age));//false 如果是一个数字返回false
+
+    var num1 = 88;
+    var num2 = "88";
+    console.log(num1 == num2); //true
+
+    var obj = new Object(3);
+    var num3 = 3;
+    console.log(obj == num3);  //true
+
+    num4 = NaN;
+    num5 = NaN;
+    console.log(num4 == num5); //false
+
+    obj1 = new Object("hello");
+    obj2 = new Object("hello");
+    console.log(obj1 == obj2); //false
+
+    console.log(null == undefined); //true
+
+
+    var msg = "hello";
+    console.log(msg.length)
+    console.log("abc\nefg"); //换行
+    console.log("abc\tefg"); //制表符
+    console.log("abc\"efg"); //转义双引号
+    console.log("abc\'efg"); //转义单引号
+
+    console.log("-----------------");
+
+    console.log(parseInt("10")); //10
+    console.log(parseInt("10abc")); //10
+    console.log(parseInt("abc10")); //NaN
+    console.log(parseInt("3.141592654")); //3
+    console.log(parseInt("3.141592654abc")); //3
+
+    console.log("-----------------");
+    console.log(parseFloat("10")); //10
+    console.log(parseFloat("10abc")); //10
+    console.log(parseFloat("10.111")); //10.111
+    console.log(parseFloat("10.111abc")); //10.111
+    console.log(parseFloat("abc10.1111abc")); //NaN
+
+    console.log("-----------------");
+    console.log(Number("10")); //10
+    console.log(Number("10abc")); //NaN
+    console.log(Number("abc10")); //NaN
+    console.log(Number("10.345")); //10.345
+    console.log(Number("10.345abc")); //NaN
+
+    console.log("-----------------");
+    console.log(Boolean(1)); //true
+    console.log(Boolean(1.11)); //true
+    console.log(Boolean(0)); //false
+    console.log(Boolean(-12)); //true
+    console.log(Boolean("true")); //true
+    console.log(Boolean("hello")); //true
+    console.log(Boolean("null")); //true
+    console.log(Boolean(null));//false
+    console.log(Boolean(undefined)); //false
+    console.log(Boolean(NaN)); //false
+
+    console.log("-----------------");
+    console.log(10/3);
+    num6 = 7;
+    str1 = "7";
+    console.log(num6 == str1); //true
+    console.log(num6 === str1); //false
+
+    console.log("-----------------");
+    var arr = new Array(2);
+    arr[0] = 1;
+    arr[1] = 2;
+    arr[2] = 3;
+    arr[3] = 4;
+    arr[4] = 5;
+
+    //遍历数组,普通for循环
+    for (var i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+    }
+
+    console.log("-----------------");
+
+    //遍历数组,for-in循环
+    for (index in arr) {
+        console.log(arr[index]);
+    }
+</script>
+</body>
+</html>

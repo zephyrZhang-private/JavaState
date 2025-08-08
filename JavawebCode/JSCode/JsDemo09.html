@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM编程</title>
+<!--浏览器对象模型-->
+</head>
+<body>
+<input type="button" value="开始" onclick="start()"><span id="s1"></span>
+<input type="button" value="结束" onclick="stop()">
+</body>
+<script type="text/javascript">
+/*    window.confirm("确认删除吗？")
+    confirm("确认删除吗？")*/
+
+    // window.prompt("请输入用户名") //输入框
+
+    // window.open("https://www.baidu.com")
+
+ /*   function hello(){alert("hello")}
+    window.setTimeout("hello()",3000); //在指定的时间后,触发指定函数,只触发一次*/
+
+var i = 1; //步长
+var time = 0 ; //作用就是 通过time 清楚定时器功能
+function start() {
+    document.getElementById("s1").innerHTML = i;
+    i++;
+    time = window.setTimeout("start()", 1000);
+}
+function stop() {
+    window.clearTimeout(time);
+}
+
+
+
+</script>
+</html>

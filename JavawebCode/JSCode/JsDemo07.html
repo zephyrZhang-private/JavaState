@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>阻止事件默认行为</title>
+</head>
+<body>
+<!--event:js中内置的事件对象,通过这个对象阻止事件默认行为和阻止传播行为-->
+  <a href="https://www.qq.com" onclick="fn(event)">【跳转到】</a>
+</body>
+<script>
+    function fn(e) {
+        if (e && e.preventDefault) { //判断是否支持IE
+            e.preventDefault(); //阻止事件默认行为,只针对非IE浏览器
+        }else {
+            window.event.returnValue = false; //IE浏览器阻止事件默认行为
+        }
+    }
+</script>
+</html>

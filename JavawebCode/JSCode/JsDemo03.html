@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内置对象</title>
+</head>
+<body>
+<script type="text/javascript">
+    var str1 = "abc"; //直接赋值
+    var str2 = new String("abc"); //通过new赋值
+    var str3 = String("abc"); //字符串的构造函数赋值
+    console.log(typeof str1) //String
+    console.log(typeof str2) //Object
+    console.log(typeof str3) //String
+
+    console.log("-------------")
+
+    var s1 = "abc"; //直接赋值
+    var s2 = new String("abc");//通过new赋值
+    var s3 = new String("abc");
+    var s4 = "abc";
+    var s5 = String("abc"); //字符串的构造函数赋值
+
+    console.log(s2 == s3); //false 同类型,
+    console.log(s1 == s4); //true
+    console.log(s1 == s5); //true
+    console.log(s1 == s2); //true 比较的是值的内容
+    console.log(s2 == s5); //true
+
+    console.log("-------------")
+
+    console.log(s1 === s2); //false 数据类型不一致
+    console.log(s1 === s5); //true
+</script>
+</body>
+</html>
