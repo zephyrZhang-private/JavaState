@@ -73,4 +73,15 @@ public class EmpInfoDaoImpl implements EmpInfoDao {
             throw new RuntimeException(e);
         }
     }
+
+    @Override
+    public List<EmpInfo> selectByPage(Integer pageNum, Integer pageSize) {
+        Object[] args = {(pageNum-1)*pageSize,pageSize};
+        try {
+            return queryRunner.query("select * from empinfo limit ?,?",new BeanListHandler<>(EmpInfo.class),args);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

@@ -1,6 +1,7 @@
 package service;
 
 import entity.EmpInfo;
+import entity.PageView;
 
 import java.util.List;
 
@@ -14,4 +15,6 @@ public interface EmpInfoService {
     int updateEmp(EmpInfo empInfo);
 
     int addEmp(EmpInfo empInfo);
+
+    PageView selectByPage(String pageNum, String pageSize);
 }

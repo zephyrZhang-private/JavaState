@@ -14,4 +14,6 @@ public interface EmpInfoDao {
     int updateEmp(EmpInfo empInfo);
 
     int addEmp(EmpInfo empInfo);
+
+    List<EmpInfo> selectByPage(Integer pageNum, Integer pageSize);
 }

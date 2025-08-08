@@ -1,6 +1,7 @@
 package controller;
 
 import entity.EmpInfo;
+import entity.PageView;
 import service.EmpInfoService;
 import service.impl.EmpInfoServiceImpl;
 
@@ -16,10 +17,25 @@ public class EmpJspServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         //展示所有雇员的信息
-        EmpInfoService empService = new EmpInfoServiceImpl();
-        List<EmpInfo> list = empService.getEmpInfo();
+        //获取分页参数
+        String pageNum = req.getParameter("pageNum");
+        String pageSize = req.getParameter("pageSize");
 
-        req.setAttribute("empInfoList",list);
+        //调用service层方法
+        EmpInfoService empService = new EmpInfoServiceImpl();
+
+        //未分页方法
+        //List<EmpInfo> list = empService.getEmpInfo();
+
+        //分页方法
+        PageView pageView = empService.selectByPage(pageNum,pageSize);
+
+        //未分页传参
+        //req.setAttribute("empInfoList",list);
+
+        //分页传参
+        req.setAttribute("pageView",pageView);
+
         req.getRequestDispatcher("/empInfo.jsp").forward(req,resp);
     }
 

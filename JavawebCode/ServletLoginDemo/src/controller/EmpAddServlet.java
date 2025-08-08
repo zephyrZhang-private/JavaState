@@ -44,9 +44,10 @@ public class EmpAddServlet extends HttpServlet {
 
         //上传的图片存储-- 本地
         //windows
-        //File file = new File("D:\\GitStore\\JavaState\\JavawebCode\\upload");
+        File file = new File("D:\\GitStore\\JavaState\\JavawebCode\\upload");
         //mac
-        File file = new File("/Users/zhangwei/Repository/upload");
+        //File file = new File("/Users/zhangwei/Repository/upload");
+
         if (!file.exists()) {
             file.mkdirs();
         }
@@ -65,9 +66,9 @@ public class EmpAddServlet extends HttpServlet {
 
         //将上传的文件保存到指定路径  参数 : 上传文件的路径
         //windows
-        //part.write("D:\\GitStore\\JavaState\\JavawebCode\\upload\\"+filename);
+        part.write("D:\\GitStore\\JavaState\\JavawebCode\\upload\\"+filename);
         //mac
-        part.write("/Users/zhangwei/Repository/upload/"+filename);
+        //part.write("/Users/zhangwei/Repository/upload/"+filename);
 
 
         //存储文件路径到数据库,只需要保存图片的名字
