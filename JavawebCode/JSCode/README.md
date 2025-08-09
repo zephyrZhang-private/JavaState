@@ -414,7 +414,17 @@ elementObj.appendChild(e) 给指定元素添加子元素
 elementObj.insertBefore(new,old) 给新节点new添加到老节点前面
 elementObj.removeChild(child) 删除子节点
 
+# 正则表达式
+正则表达式格式
 
+    ^ : 开头
+    $ : 结尾
+    次数 : * 0个或多个 + 1个或多个 ? 0个或1个 {n} n个 {n,m} 最少n个最多m个
+    通配符 : \d 任意的数字 \D 任意的非数字 \s 任意的空白 \S 任意的非空白
+    . : 任意字符,\n除外
+    组合 : [a-z] [0-9]
+    标志 : i 忽略大小写
+    方法 : Regexp.test(msg)
 
 
 
