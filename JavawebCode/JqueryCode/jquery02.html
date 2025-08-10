@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery基本选择器</title>
+<!--  三大基本选择器
+  id选择器
+  类选择器
+  标签选择器
+-->
+  <style>
+    .a{
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      border-radius: 50%;
+    }
+    .b{
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+    }
+    .c{
+      width: 100px;
+      height: 100px;
+      background-color: orangered;
+    }
+  </style>
+</head>
+<body>
+<div id="box">盒子1</div>
+<p>盒子2</p>
+<div class="box">盒子3</div>
+</body>
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+    /* 基本选择器
+    * id选择器
+    * 标签选择器
+    * 类选择器
+    * */
+  $(function (){
+    //通过id选中的HTML节点添加类样式
+    $("div#box").addClass("a")
+    //获取选中节点的文本内容
+    var msg = $("div#box").text();
+    console.log(msg);
+  })
+
+  $(function() {
+    //通过标签名获取节点添加类样式
+    $("p").addClass("b");
+  })
+
+  $(function() {
+    //通过类选择器获取节点添加类样式
+    $("div.box").addClass("c").css({"color":"red","border-radius":"50%"}); // 链式操作
+  })
+
+</script>
+</html>

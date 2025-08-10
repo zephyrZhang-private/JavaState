@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery高级选择器</title>
+  <style type="text/css">
+    .a{
+        width: 100px;
+        height: 100px;
+        background-color: orangered ;
+    }
+  </style>
+</head>
+<body>
+    <div id="box1"></div>
+    <p id="p1"></p>
+
+    <div id="box2">
+        <div id="box3">
+            <div id="box4"></div>
+        </div>
+    </div>
+
+    <div id="box5">盒子5</div>
+    <div id="box6">盒子6</div>
+    <div id="box7">盒子7</div>
+    <div id="box8">盒子8</div>
+    <div id="box9">盒子9</div>
+</body>
+<script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+    /*
+    * 并集选择器语法
+    * $("选择器1,选择器2,选择器3...")
+    *
+    * 后代选择器
+    * $("选择器1 选择器2 选择器3 ...")
+    *
+    * 子父级选择器
+    * $("选择器1 > 选择器2")
+    *
+    * 相邻兄弟选择器
+    * $("选择器1 + 选择器2 + 选择器3 + 选择器4")
+    *
+    * 通用兄弟选择器
+    * $("选择器1 ～ 选择器2 ～ 选择器3")
+    * */
+    $(function (){
+        //并集选择器
+        $("div#box1,p#p1").addClass("a");
+        //后代选择器
+        $("div#box2 div#box3 div#box4").addClass("a");
+        //子父级选择器
+        $("div#box2 > div#box3").addClass("a")
+        //相邻兄弟选择器
+        $("div#box5 + div#box6").addClass("a");
+        //通用兄弟选择器
+        $("div#box7 ~ div#box9").addClass("a");
+    })
+</script>
+</html>

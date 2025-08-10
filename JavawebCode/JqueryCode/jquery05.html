@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内容选择器</title>
+  <style>
+    .a{
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+<div>John Resig</div>
+<div>George Martin</div>
+<div>Macon John Sinclair</div>
+<div>J. Ohn</div>
+
+<hr>
+<table>
+  <tr>
+    <td>Value 1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Value 2</td>
+    <td></td>
+  </tr>
+</table>
+<hr>
+
+<div>
+  <p>段落1</p>
+</div>
+<div>盒子1</div>
+</body>
+<script src="src/js/jquery-3.6.0.js"></script>
+<script>
+/* 内容选择器
+* :contains 匹配标签中文本内容
+* :empty 匹配为空的HTML标签
+* :has 匹配包含某个指定标签的HTML对象
+* :parent 匹配包含子元素或文本的标签
+*  */
+  $(function (){
+    $("div:contains('John')").css("color", "red");
+    //设置html标签的文本内容
+    $("td:empty").text("单元格");
+    //设置包含p标签的div样式
+    $("div:has(p)").addClass("a");
+    //包含子元素设置样式
+    $("td:parent").css("color", "orangered");
+  })
+</script>
+</html>

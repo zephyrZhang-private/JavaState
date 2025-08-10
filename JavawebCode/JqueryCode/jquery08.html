@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单选择器</title>
+  <style>
+    .a{
+      width: 100px;
+      height: 100px;
+      background-color: orangered;
+    }
+  </style>
+</head>
+<body>
+用户名 : <input type="text" value="admin">
+<br>
+密码 : <input type="password" value="123">
+<br>
+性别 : <input type="radio" value="male" name="gender" checked="checked">男
+        <input type="radio" value="female" name="gender">女
+<br>
+兴趣爱好 : <input type="checkbox" value="football" checked>足球
+        <input type="checkbox" value="basketball" checked>篮球
+        <input type="checkbox" value="swimming">游泳
+<br>
+昵称 : <input type="text" value="admin" disabled>
+<hr>
+
+<select>
+    <option value="beijing">北京</option>
+    <option value="shanghai">上海</option>
+    <option value="shenzhen">深圳</option>
+</select>
+<br>
+<input type="button" value="提交" id="btn">
+</body>
+<script src="src/js/jquery-3.6.0.js"></script>
+<script>
+  /* 表单选择器
+  * :text 选中文本表单控件
+  * :password 选中密码表单控件
+  * :radio:checked 选中的单选按钮
+  * :checkbox:checked 获取被选中复选框
+  * :selected 被选中的下拉菜单
+  * :disable 获取不可用表单控件
+  * */
+  $(function() {
+      //获取标签类型是text的value属性值
+      //test() 选中普通文本表单控件 val() 获取对应表单控件value值
+      var username = $(":text").val();
+      console.log(username);
+      var password = $(":password").val(); //:password 选中密码表单控件
+      console.log(password);
+      var gender = $(":radio:checked").val(); //:radio:checked 选中的单选按钮
+      console.log(gender);
+      var hobbies = $(":checkbox:checked"); //:checkbox:checked 获取被选中复选框
+      // 遍历数组中的元素
+      $(hobbies).each(function() {
+          console.log(this.value);
+      })
+
+      $("#btn").click(function() { //jquery 中的单击事件
+          var value = $("select option:selected").val();
+          console.log(value);
+      })
+
+      var name = $("input:disabled").val();
+      console.log(name);
+  })
+</script>
+</html>

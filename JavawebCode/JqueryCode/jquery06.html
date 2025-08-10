@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>可见性选择器</title>
+</head>
+<body>
+<table>
+  <!--设置隐藏元素 display:none-->
+  <tr style="display: none">
+    <td>单元格1</td>
+  </tr>
+  <tr>
+    <td>单元格2</td>
+  </tr>
+</table>
+</body>
+<script src="src/js/jquery-3.6.0.js"></script>
+<script>
+  /* 可见性选择器
+  * hidden 选中隐藏的元素
+  * visible 选中显示的元素
+  * */
+  $(function() {
+    $("tr:hidden").show(); //选中隐藏的标签,show显示出来
+    $("tr:visible").hide(); //选中显示的标签,hide隐藏起来
+  })
+</script>
+</html>

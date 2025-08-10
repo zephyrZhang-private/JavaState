@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+  <style>
+    .a{
+      width: 100px;
+      height: 100px;
+      background-color: orangered;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <p>Hello!</p>
+</div>
+<div id="test2">元素1</div>
+<div id="box1">盒子1</div>
+<div id="box2">盒子2</div>
+</body>
+<script src="src/js/jquery-3.6.0.js"></script>
+<script>
+  /* 属性选择器
+  *
+  * */
+  $(function() {
+    //选择div中包含id属性的元素
+    //$("div[id]").addClass("a");
+    //选择指定id为test2的元素
+    //$("div[id='test2']").addClass("a");
+    //取反,选择id不为test2的元素
+    //$("div[id!='test2']").addClass("a");
+    //选择div标签id以box开头的元素设置类样式
+    //$("div[id^=box]").addClass("a");
+    //选择div标签id以2结尾的元素设置类样式
+    //$("div[id$=x1]").addClass("a");
+    //选择div标签id包含box的元素设置类样式
+    $("div[id*=box]").addClass("a");
+  })
+</script>
+</html>

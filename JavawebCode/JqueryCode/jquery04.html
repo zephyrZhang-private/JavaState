@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>结构伪类选择器</title>
+</head>
+<body>
+<ul>
+  <li>列表1</li>
+  <li>列表2</li>
+  <li>列表3</li>
+  <li>列表4</li>
+  <li>列表5</li>
+
+  <h1>标题1</h1>
+  <h2>标题2</h2>
+  <h3>标题3</h3>
+  <h4>标题4</h4>
+  <h5>标题5</h5>
+  <h6>标题6</h6>
+
+</ul>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script>
+  $(function(){
+/*    //给第一个选择的元素设置红色字体
+    $("li:first").css("color","red");
+    //给第二个选择的元素设置字体颜色
+    $("li:eq(1)").css("color","yellow"); // 从0开始编号
+    //给最后一个选择的元素设置绿色字体
+    $("li:last").css("color","green");*/
+
+/*    //给偶数编号的元素设置样式
+    $("li:even").css("color","red");
+    //给奇数编号的元素设置样式
+    $("li:odd").css("color","green");*/
+
+/*    //给大于1的编号设置样式
+    $("li:gt(1)").css("color","red");
+    //给小于1的编号设置样式
+    $("li:lt(1)").css("color","green");*/
+
+    //给不是编号3的设置样式
+    $("li:not(:eq(3))").css("color","red");
+
+    //给所有的标题标签设置样式
+    $(":header").css("color","green");
+  })
+</script>
+</html>
