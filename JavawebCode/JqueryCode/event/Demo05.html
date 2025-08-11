@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM操作append</title>
+</head>
+<body>
+  <div id="box1"></div>
+  <div id="box2"></div>
+</body>
+<script src="../js/jquery-3.6.0.js"></script>
+<script>
+  $(function (){
+      //将元素加到指定元素内部的尾部
+      $("div#box1").append("<p class='p1'>段落1</p>").append("<p class='p2'>段落2</p>").css("color","red");
+  })
+</script>
+</html>

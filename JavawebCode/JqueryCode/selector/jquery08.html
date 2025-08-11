@@ -34,7 +34,7 @@
 <br>
 <input type="button" value="提交" id="btn">
 </body>
-<script src="src/js/jquery-3.6.0.js"></script>
+<script src="../js/jquery-3.6.0.js"></script>
 <script>
   /* 表单选择器
   * :text 选中文本表单控件
@@ -47,7 +47,7 @@
   $(function() {
       //获取标签类型是text的value属性值
       //test() 选中普通文本表单控件 val() 获取对应表单控件value值
-      var username = $(":text").val();
+      var username = $("input:text").val();
       console.log(username);
       var password = $(":password").val(); //:password 选中密码表单控件
       console.log(password);

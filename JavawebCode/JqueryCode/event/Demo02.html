@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>change事件</title>
+</head>
+<body>
+<select id="s1">
+  <option value="bj">北京市</option>
+  <option value="sh">上海市</option>
+  <option value="gd">广东省</option>
+</select>
+
+<select id="s2">
+  <option>请选择</option>
+</select>
+</body>
+<script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+  $(function (){
+    $("select#s1").change(function (){
+      var value = $("select option:selected").val()
+      if (value == "bj"){
+        //清空option
+        $("select#s2").html("");
+        var arr = ["海淀区","朝阳区","昌平区","西城区"]
+        for(var i=0;i<arr.length;i++){
+          $("select#s2").append("<option>" +arr[i]+ "</option>");
+        }
+      }
+      if (value == "sh"){
+        $("select#s2").html("");
+          var arr = ["黄埔区","浦东新区","普陀区","徐汇区"]
+          for(var i=0;i<arr.length;i++){
+            $("select#s2").append("<option>" +arr[i]+ "</option>");
+          }
+        }
+      if (value == "gd"){
+        $("select#s2").html("");
+          var arr = ["广州市","深圳市","东莞市","惠州市"]
+          for(var i=0;i<arr.length;i++){
+            $("select#s2").append("<option>" +arr[i]+ "</option>");
+          }
+        }
+    })
+  })
+</script>
+</html>

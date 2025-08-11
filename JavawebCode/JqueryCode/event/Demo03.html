@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>失去获取焦点事件</title>
+</head>
+<body>
+<form action="#" method="post">
+    用户名<input type="text"><span id="s1"></span>
+    <br>
+    密码<input type="password"><span id="s2"></span>
+</form>
+</body>
+<script src="../js/jquery-3.6.0.js"></script>
+<script>
+    $(function(){
+        $("input:text").focus(function(){
+            $("span#s1").html("请输入用户名").css("color","blue");
+        }).blur(function(){
+            var reg = /^[a-zA-Z]\w{5,10}$/;
+            var username = $("input:text").val().trim();
+            if (username.length != 0) {
+                if (reg.test(username)) {
+                    $("span#s1").html("用户名格式正确").css("color", "green");
+                } else {
+                    $("span#s1").html("用户名格式错误").css("color", "red");
+                }
+            }else {
+                $("span#s1").html("用户名不能为空").css("color", "red");
+            }
+        })
+    })
+</script>
+</html>

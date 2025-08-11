@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM操作appendTo</title>
+</head>
+<body>
+
+<div id="box1"></div>
+<div id="box2"></div>
+<p class="p2">段落2</p>
+
+<script src="../js/jquery-3.6.0.js"></script>
+<script>
+  $(function () {
+    //获取jquery对象
+    var $box1obj = $("div#box1");
+    //创建一个p标签,并移动到box元素内部
+    $("<p class='p1'>段落1</p>").appendTo($box1obj);
+
+    //将p标签移动到指定标签内部
+    $("p.p2").appendTo("div#box2");
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery单击事件</title>
+</head>
+<body>
+<form action="#" method="post">
+  用户名<input type="text" name="username"><span id="s1"></span><br>
+  <input type="button" value="提交">
+</form>
+</body>
+<script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+  $(function(){
+      $("input:button").click(function(){
+          var username = $(":input:text").val();
+          if(username.length >= 4 && username.length <= 6){
+              $("span#s1").html("输入正确").css("color","green");
+          }
+          else {
+              $("span#s1").html("用户名格式错误").css("color","red");
+          }
+      })
+  })
+</script>
+</html>
