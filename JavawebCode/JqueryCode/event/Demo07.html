@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM操作-prepend-prependTo</title>
+</head>
+<body>
+<div id="box">
+    <div id="box1"></div>
+</div>
+
+<p>段落1</p>
+
+<div id="box3">
+    <div id="box4">盒子4</div>
+</div>
+
+<script src="../js/jquery-3.6.0.js"></script>
+<script>
+    $(function() {
+        $("div#box").prepend("<div id='box2'>盒子2</div>");
+
+        //移动元素到指定的地方
+        $("p").prependTo($("div#box3"));
+        //元素不存在时,就是创建后移动
+        // 原生Js写法
+        // var divObj = document.createElement("div");
+        // divObj.setAttribute("id","box1");
+        $("<p id='p2'>段落2</p>").prependTo($("div#box3"));
+    })
+</script>
+</body>
+</html>

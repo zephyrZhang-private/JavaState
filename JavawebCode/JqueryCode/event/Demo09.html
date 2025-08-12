@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM操作-replaceWith-empty-remove</title>
+</head>
+<body>
+<p>Hello</p>
+<p>你好</p>
+<p></p>
+
+<div id="box1">
+    <div id="box2">
+        <div id="box3"></div>
+    </div>
+</div>
+
+<hr>
+
+<div id="box4">
+    <div id="box5">
+        <div id="box6"></div>
+    </div>
+</div>
+
+<script src="../js/jquery-3.6.0.js"></script>
+<script>
+  $(function () {
+      //替换所有标签
+      $("p").replaceWith("<div>eric</div>")
+
+      //清空指定节点的所有子节点
+      $("div#box1").empty();
+
+      //对指定节点进行删除
+      $("div#box5").remove();
+
+  })
+</script>
+</body>
+</html>

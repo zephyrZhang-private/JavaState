@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery对象与DOM对象互相转换</title>
+</head>
+<body>
+<div id="box"></div>
+<p id="p1"></p>
+
+<script src="../js/jquery-3.6.0.js"></script>
+<script>
+    $(function () {
+        //获取jQuery对象
+        var $divObj = $("div#box");
+
+        //将jQuery转换成js对象(DOM对象)
+        //get(0)  [0] 两种方式
+        //var divObj = $divObj[0];
+        var divObj = $divObj.get(0);
+        divObj.innerHTML = "Hello World!";
+
+
+        //获取js对象
+        pObj = document.getElementById("p1");
+        //将js对象转换成jQuery对象
+        $pObj = $(pObj);
+        $pObj.html("段落标签");
+    })
+</script>
+</body>
+</html>

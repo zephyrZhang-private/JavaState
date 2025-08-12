@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM操作-alter-before</title>
+</head>
+<body>
+<div id="box1">盒子1</div>
+
+
+<script src="../js/jquery-3.6.0.js"></script>
+<script>
+    $(function () {
+        $("div#box1").after("<div id='box2'>盒子2</div>").before("<div id='box'>盒子3</div>");
+    })
+</script>
+</body>
+</html>

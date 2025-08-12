@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM操作-clone</title>
+</head>
+<body>
+<div id="box1" onclick="alert('hello')">盒子1</div>
+<div id="box2">盒子2</div>
+
+<script src="../js/jquery-3.6.0.js"></script>
+<script>
+    $(function () {
+        //节点复制
+        $("div#box1").clone().appendTo($("div#box2"));
+    })
+</script>
+</body>
+</html>
