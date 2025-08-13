@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-<button id="btn" value="异步加载服务器" onclick="f1()">发送原生ajax请求</button>
+<button id="btn" value="异步加载服务器" onclick="f1()">发送格式为key:value的原生ajax请求</button>
 <span id="s1"></span>
 <script>
 
@@ -34,14 +34,12 @@
             * 3 服务器正在处理用户发送的ajax请求
             * 4 服务器成功处理用户发送的ajax请求,并做好响应准备
             * */
-            if (x.readyState == 4) {
+            if (x.readyState == 4 && x.status == 200) {
                 //正常的响应状态码
-                if (x.status == 200) {
                     //获取后台向前台响应的文本形式数据
                     data = x.responseText;
                     document.getElementById("s1").innerHTML = data;
                     console.log(data);
-                }
             }
         }
 
