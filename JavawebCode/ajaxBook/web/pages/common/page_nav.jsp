@@ -17,12 +17,12 @@
     <%--页码输出的开始--%>
     <c:choose>
         <%--情况1：如果总页码小于等于5的情况，页码的范围是：1-总页码--%>
-        <c:when test="${ requestScope.page.pageTotal <= 5 }">
+        <c:when test="${ requestScope.page.totalPage <= 5 }">
             <c:set var="begin" value="1"/>
-            <c:set var="end" value="${requestScope.page.pageTotal}"/>
+            <c:set var="end" value="${requestScope.page.totalPage}"/>
         </c:when>
         <%--情况2：总页码大于5的情况--%>
-        <c:when test="${requestScope.page.pageTotal > 5}">
+        <c:when test="${requestScope.page.totalPage > 5}">
             <c:choose>
                 <%--小情况1：当前页码为前面3个：1，2，3的情况，页码范围是：1-5.--%>
                 <c:when test="${requestScope.page.pageNo <= 3}">
@@ -30,9 +30,9 @@
                     <c:set var="end" value="5"/>
                 </c:when>
                 <%--小情况2：当前页码为最后3个，8，9，10，页码范围是：总页码减4 - 总页码--%>
-                <c:when test="${requestScope.page.pageNo > requestScope.page.pageTotal-3}">
-                    <c:set var="begin" value="${requestScope.page.pageTotal-4}"/>
-                    <c:set var="end" value="${requestScope.page.pageTotal}"/>
+                <c:when test="${requestScope.page.pageNo > requestScope.page.totalPage-3}">
+                    <c:set var="begin" value="${requestScope.page.totalPage-4}"/>
+                    <c:set var="end" value="${requestScope.page.totalPage}"/>
                 </c:when>
                 <%--小情况3：4，5，6，7，页码范围是：当前页码减2 - 当前页码加2--%>
                 <c:otherwise>
@@ -55,22 +55,22 @@
 
 
     <%-- 如果已经 是最后一页，则不显示下一页，末页 --%>
-    <c:if test="${requestScope.page.pageNo < requestScope.page.pageTotal}">
+    <c:if test="${requestScope.page.pageNo < requestScope.page.totalPage}">
         <a href="bookServlet?action=page&pageNo=${page.pageNo+1}&pageSize=${page.pageSize}">下一页</a>
-        <a href="bookServlet?action=page&pageNo=${page.pageTotal}&pageSize=${page.pageSize}">末页</a>
+        <a href="bookServlet?action=page&pageNo=${page.totalPage}&pageSize=${page.pageSize}">末页</a>
     </c:if>
 
-    共${requestScope.page.pageTotal}页，${requestScope.page.pageTotalCount }条记录
+    共${requestScope.page.totalPage}页，${requestScope.page.totalCount }条记录
     到第<input value="${param.pageNo}" name="pn" id="pn_input"/>页
     <input id="searchPageBtn" type="button" value="确定">
 
-   <%-- <script type="text/javascript">
+<%--    <script type="text/javascript">
         $(function () {
             // 跳到指定的页码
             $("#searchPageBtn").click(function () {
 
                 var pageNo = $("#pn_input").val();
-                location.href = "http://localhost:8081/bookServlet?action=page&pageNo=" + pageNo;
+                location.href = "http://localhost:8080/bookServlet?action=page&pageNo=" + pageNo;
                 &lt;%&ndash;var pageTotal = ${requestScope.page.pageTotal};&ndash;%&gt;
                 &lt;%&ndash;alert(pageTotal);&ndash;%&gt;
 
@@ -84,7 +84,7 @@
     <script type="text/javascript">
         document.getElementById("searchPageBtn").onclick = function(){
            var pageNo = document.getElementById("pn_input").value;
-           location.href = "http://localhost:8081/bookServlet?action=page&pageNo=" + pageNo;
+           location.href = "http://localhost:8080/bookServlet?action=page&pageNo=" + pageNo;
         }
     </script>
 

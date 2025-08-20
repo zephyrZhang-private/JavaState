@@ -13,21 +13,20 @@ import java.lang.reflect.Method;
  */
 public class BaseServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)  {
         String action = req.getParameter("action");
-        Method method;
         try {
-            method = this.getClass().getDeclaredMethod(action, HttpServletRequest.class, HttpServletResponse.class);
-
+            System.out.println("Calling method: " + action);
+            Method method = this.getClass().getDeclaredMethod(action, HttpServletRequest.class, HttpServletResponse.class);
             //执行方法
             method.invoke(this,req,resp);
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
         doGet(req, resp);
     }
 }

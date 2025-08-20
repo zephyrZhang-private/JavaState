@@ -32,16 +32,16 @@
 				<td>库存</td>
 				<td colspan="2">操作</td>
 			</tr>
-<%--			<c:forEach items="${page.items}" var="book">--%>
-			<c:forEach items="${books}" var="book">
+			<c:forEach items="${page.items}" var="book">
+<%--			<c:forEach items="${books}" var="book">--%>
 			<tr>
 				<td>${book.name}</td>
 				<td>${book.price}</td>
 				<td>${book.author}</td>
 				<td>${book.sales}</td>
 				<td>${book.stock}</td>
-				<td><a href="/bookServlet?action=getBook&id=${book.id}">修改</a></td>
-				<td><a href="/bookServlet?action=delete&id=${book.id}">删除</a></td>
+				<td><a href="/bookServlet?action=getBook&id=${book.id}&pageNo=${page.pageNo}">修改</a></td>
+				<td><a href="/bookServlet?action=delete&id=${book.id}&pageNo=${page.pageNo}">删除</a></td>
 			</tr>
 			</c:forEach>
 			<tr>

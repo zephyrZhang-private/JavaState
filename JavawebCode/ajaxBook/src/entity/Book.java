@@ -16,5 +16,5 @@ public class Book {
     private Integer sales;
     private Integer stock;
 
-    private String img_path;
+    private String imgPath = "static/img/default.jpg";
 }

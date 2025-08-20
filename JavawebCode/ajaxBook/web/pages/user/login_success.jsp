@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>千锋教育会员注册页面</title>
+    <title>正维书院注册页面</title>
     <%-- 静态包含 base标签、css样式、jQuery文件 --%>
     <%@ include file="/pages/common/head.jsp" %>
     <style type="text/css">

@@ -27,6 +27,8 @@ public class UserServlet extends BaseServlet {
             req.setAttribute("username",username);
             req.getRequestDispatcher("/pages/user/login.jsp").forward(req, resp);
         }else {
+            //降用户信息保存在session作用域中
+            req.getSession().setAttribute("user",loginUser);
             resp.sendRedirect(req.getContextPath() + "/pages/user/login_success.jsp");
         }
     }
@@ -37,9 +39,13 @@ public class UserServlet extends BaseServlet {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
         String email = req.getParameter("email");
+        //获取用户输入验证码
         String code = req.getParameter("code");
+
+        //获取session作用域中验证码
+        String validate_code = (String) req.getSession().getAttribute("KAPTCHA_SESSION_KEY");
         User user = EntityUtils.copyParamToBean(req.getParameterMap(),new User());
-        if (code.equalsIgnoreCase("abcd")){
+        if (validate_code.equals(code)){
             if (userService.checkUsername(username)){
                 req.getSession().setAttribute("msg","用户名已存在");
                 req.getRequestDispatcher("/pages/user/register.jsp").forward(req, resp);
@@ -54,5 +60,12 @@ public class UserServlet extends BaseServlet {
             req.setAttribute("email",email);
             req.getRequestDispatcher("/pages/user/register.jsp").forward(req, resp);
         }
+    }
+
+    //注销红能代码
+    public void logout(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        //销毁session对象
+        req.getSession().invalidate();
+        resp.sendRedirect(req.getContextPath() + "/index.jsp");
     }
 }

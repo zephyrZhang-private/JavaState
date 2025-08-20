@@ -57,4 +57,16 @@ public class TestBookDao {
             System.out.println(book);
         }
     }
+
+    @Test
+    public void test06(){
+        int i= bookDao.queryForTotalCount();
+        System.out.println(i);
+    }
+
+    @Test
+    public void test07(){
+        int i = bookDao.queryForTotalCountByPrice(20,60);
+        System.out.println(i);
+    }
 }

@@ -38,6 +38,9 @@ public class EntityUtils {
      */
     public static int parseInt(String str, int defaultValue) {
         try {
+            if (str == null || str.trim().equals("")) {
+                return defaultValue;
+            }
             return Integer.parseInt(str);
         } catch (NumberFormatException e) {
             e.printStackTrace();
