@@ -13,11 +13,11 @@
     <%@ include file="/pages/common/head.jsp" %>
 
     <script>
-      $(function() {
-        $("#register_btn").click(function() {
-          location.href = "http://localhost:8080/pages/user/register.jsp";
+        $(function () {
+            $("#register_btn").click(function () {
+                location.href = "http://localhost:8080/pages/user/register.jsp";
+            })
         })
-      })
     </script>
 
 
@@ -59,8 +59,12 @@
                         <label>用户密码：</label>
                         <input class="itxt" type="password" placeholder="请输入密码"
                                autocomplete="off" tabindex="1" name="password" id="password"/>
-                        <br>
-                        <br>
+                        <br><br>
+                        <label>自动登录</label>
+                        <input type="checkbox" name="autoLogin" id="autoLogin"/>
+                        <label>记住密码</label>
+                        <input type="checkbox" name="remember" id="remember"/>
+                        <br><br>
                         <input type="submit" value="登录" id="sub_btn"/>
                         <input type="button" value="注册" id="register_btn"/>
                     </form>

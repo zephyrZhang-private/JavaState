@@ -3,6 +3,7 @@ package controller;
 import entity.User;
 import service.UserService;
 import service.impl.UserServiceImpl;
+import utils.CookieUtil;
 import utils.EntityUtils;
 
 import javax.servlet.ServletException;
@@ -20,6 +21,7 @@ public class UserServlet extends BaseServlet {
     public void login(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
+        String autoLogin = req.getParameter("autoLogin");
 
         User loginUser = userService.login(username, password);
         if (loginUser == null) {
@@ -27,8 +29,15 @@ public class UserServlet extends BaseServlet {
             req.setAttribute("username",username);
             req.getRequestDispatcher("/pages/user/login.jsp").forward(req, resp);
         }else {
-            //降用户信息保存在session作用域中
+            //将用户信息保存在session作用域中
             req.getSession().setAttribute("user",loginUser);
+            //记住密码复选框被选中
+            if (autoLogin != null) {
+                //记录cookie回传客户端
+                CookieUtil.setCookie("autoLogin",username+":"+password,req,resp);
+            }else {
+                CookieUtil.removeCookie("autoLogin",req,resp);
+            }
             resp.sendRedirect(req.getContextPath() + "/pages/user/login_success.jsp");
         }
     }
@@ -52,6 +61,9 @@ public class UserServlet extends BaseServlet {
             }else {
                 //userService.register(new User(null, username, password, email));
                 userService.register(user);
+                //取出user所有信息放入session
+                userService.findUserByUser(user);
+                req.getSession().setAttribute("user",user);
                 req.getRequestDispatcher("/pages/user/register_success.jsp").forward(req, resp);
             }
         }else {
@@ -62,10 +74,12 @@ public class UserServlet extends BaseServlet {
         }
     }
 
-    //注销红能代码
+    //注销代码
     public void logout(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //销毁session对象
         req.getSession().invalidate();
+        //清理cookie
+        CookieUtil.removeCookie("autoLogin",req,resp);
         resp.sendRedirect(req.getContextPath() + "/index.jsp");
     }
 }

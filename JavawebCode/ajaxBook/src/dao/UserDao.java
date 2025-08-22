@@ -11,4 +11,6 @@ public interface UserDao {
 
     //保存用户信息
     public int saveUser(User user);
+
+    User findUserByUser(User user);
 }

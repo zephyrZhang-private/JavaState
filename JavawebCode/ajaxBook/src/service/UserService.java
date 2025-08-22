@@ -12,4 +12,6 @@ public interface UserService {
 
     //检查用户名是否可用 true 用户名存在  false 用户名不存在
     public boolean checkUsername(String username);
+
+    public User findUserByUser(User user);
 }

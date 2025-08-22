@@ -4,7 +4,6 @@ import entity.User;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -22,6 +21,7 @@ public class LoginFilter implements Filter{
         whiteList.add("/login.jsp");         // 登录页面
         whiteList.add("/register.jsp");      // 注册页面
         whiteList.add("/static/");           // 静态资源目录
+        whiteList.add("/kaptcha.jpg");       // 验证码
     }
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {

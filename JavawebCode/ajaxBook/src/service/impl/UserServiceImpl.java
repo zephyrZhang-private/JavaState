@@ -24,4 +24,9 @@ public class UserServiceImpl implements UserService {
         if (userDao.queryUserByUsername(username) == null) {return false;}
         return true;
     }
+
+    @Override
+    public User findUserByUser(User user) {
+        return userDao.findUserByUser(user);
+    }
 }
