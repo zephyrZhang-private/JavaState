@@ -40,8 +40,8 @@
 				<td>${book.author}</td>
 				<td>${book.sales}</td>
 				<td>${book.stock}</td>
-				<td><a href="/bookServlet?action=getBook&id=${book.id}&pageNo=${page.pageNo}">修改</a></td>
-				<td><a href="/bookServlet?action=delete&id=${book.id}&pageNo=${page.pageNo}">删除</a></td>
+				<td><a href="bookServlet?action=getBook&id=${book.id}&pageNo=${page.pageNo}">修改</a></td>
+				<td><a href="bookServlet?action=delete&id=${book.id}&pageNo=${page.pageNo}">删除</a></td>
 			</tr>
 			</c:forEach>
 			<tr>
