@@ -20,7 +20,7 @@ public class Cart {
     private Map<Integer, CartItem> items = new HashMap<>();
 
     //添加商品项
-    void addCartItem(CartItem cartItem) {
+    public void addCartItem(CartItem cartItem) {
         CartItem item = items.get(cartItem.getId());
         if (item == null) {
             //说明购物车之前没添加过此商品
@@ -33,26 +33,26 @@ public class Cart {
     }
 
     //删除购物项
-    void deleteCartItem(Integer id) {
+    public void deleteCartItem(Integer id) {
         items.remove(id);
     }
 
     //清空购物车
-    void clearCart() {
+    public void clearCart() {
         items.clear();
     }
 
     //修改数量和金额
-    void updateCount(Integer id, Integer count) {
+    public void updateCount(Integer id, Integer count) {
         CartItem cartItem = items.get(id);
-        if (cartItem == null) {
+        if (cartItem != null) {
             cartItem.setCount(count);
             cartItem.setTotalPrice(cartItem.getPrice().multiply(BigDecimal.valueOf(count)));
         }
     }
 
     //获取商品总数量
-    Integer getTotalCount() {
+    public Integer getTotalCount() {
         Set<Map.Entry<Integer, CartItem>> entries = items.entrySet();
         Integer totalCount = 0;
         for (Map.Entry<Integer, CartItem> entry : entries) {
@@ -62,7 +62,7 @@ public class Cart {
     }
 
     //获取商品总金额
-    BigDecimal getTotalPrice() {
+    public BigDecimal getTotalPrice() {
         BigDecimal totalPrice = BigDecimal.ZERO;
         for (Map.Entry<Integer, CartItem> entry : items.entrySet()) {
             totalPrice = totalPrice.add(entry.getValue().getTotalPrice());

@@ -36,7 +36,7 @@
 					var count = this.value;
 					if ( confirm("你确定要将【" + name + "】商品修改数量为：" + count + " 吗?") ) {
 						//发起请求。给服务器保存修改
-						location.href = "http://localhost:8081/cartServlet?action=updateCount&count="+count+"&id="+id;
+						location.href = "http://localhost:8080/cartServlet?action=updateCount&count="+count+"&id="+id;
 					} else {
 						// defaultValue属性是表单项Dom对象的属性。它表示默认的value属性值。
 						this.value = this.defaultValue;

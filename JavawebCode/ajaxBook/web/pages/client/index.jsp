@@ -16,7 +16,7 @@
                  * @type {jQuery}
                  */
                 var bookId = $(this).attr("bookId");
-                location.href = "http://localhost:8081/cartServlet?action=addItem&id=" + bookId;
+                location.href = "http://localhost:8080/cartServlet?action=addItem&id=" + bookId;
 
             });
         });
