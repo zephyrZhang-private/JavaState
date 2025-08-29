@@ -7,14 +7,58 @@
   <version>1.0-SNAPSHOT</version>
   <name>JavawebMaven Maven Webapp</name>
   <url>http://maven.apache.org</url>
+
+  <!--dependencyManagement只是对版本依赖锁定,没有降依赖引入项目-->
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-beans</artifactId>
+        <version>5.0.2.RELEASE</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>5.0.2.RELEASE</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
+      <!--
+      scope : 作用域
+        compile - 默认(主程序 测试代码 打包)
+        test - (测试代码)
+        provided - (主程序 测试代码)
+        runtime - (测试代码 打包)
+      -->
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>5.2.1.RELEASE</version>
+      <!--排除依赖-->
+<!--      <exclusions>
+        <exclusion>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-aop</artifactId>
+        </exclusion>
+      </exclusions>-->
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aop</artifactId>
+      <version>5.0.2.RELEASE</version>
+    </dependency>
   </dependencies>
+
   <build>
     <finalName>JavawebMaven</finalName>
     <plugins>
@@ -29,4 +73,5 @@
       </plugin>
     </plugins>
   </build>
+
 </project>
